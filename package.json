@@ -26,6 +26,9 @@
     "bulma": "^0.9.4"
   },
   "targets": {
-    "main": false
+    "main": false,
+    "default": {
+      "distDir": "docs"
+    }
   }
 }
