@@ -5,7 +5,8 @@
   "main": "src/js/index.js",
   "scripts": {
     "dev": "parcel src/index.pug",
-    "build": "parcel build src/index.pug"
+    "predeploy": "rm -rf dist && parcel build src/index.pug --public-url 'https://github.com/JRiggles/jriggles.github.io' && cp CNAME ./dist",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -23,12 +24,10 @@
     "parcel": "^2.6.2"
   },
   "dependencies": {
-    "bulma": "^0.9.4"
+    "bulma": "^0.9.4",
+    "gh-pages": "^4.0.0"
   },
   "targets": {
-    "main": false,
-    "default": {
-      "distDir": "docs"
-    }
+    "main": false
   }
 }
