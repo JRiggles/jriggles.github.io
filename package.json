@@ -21,11 +21,11 @@
   "devDependencies": {
     "@parcel/transformer-pug": "^2.6.2",
     "@parcel/transformer-sass": "^2.6.2",
-    "parcel": "^2.6.2"
+    "parcel": "^2.6.2",
+    "gh-pages": "^4.0.0"
   },
   "dependencies": {
-    "bulma": "^0.9.4",
-    "gh-pages": "^4.0.0"
+    "bulma": "^0.9.4"
   },
   "targets": {
     "main": false
