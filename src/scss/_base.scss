@@ -4,24 +4,17 @@ html, body {
 }
 
 ::-webkit-scrollbar {
-	width: 0.5rem;
-}
-
-::-webkit-scrollbar-track {
-	background: $dark;
-}
-
-::-webkit-scrollbar-thumb {
-	background: darken($light, 43%);
-	border-radius: 0.25rem;
-	&:hover {
-		color: $primary;
+	width: 0.33rem;
+	&-track {
+		background: $dark;
 	}
-}
-
-.feather {
-	stroke: $light;
-	stroke-width: 1.5;
+	&-thumb {
+		background: darken($light, 43%);
+		border-radius: 0.25rem;
+		&:hover {
+			color: $primary;
+		}
+	}
 }
 
 .hero {
