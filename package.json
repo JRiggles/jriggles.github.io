@@ -21,11 +21,13 @@
   "devDependencies": {
     "@parcel/transformer-pug": "^2.6.2",
     "@parcel/transformer-sass": "^2.6.2",
-    "parcel": "^2.6.2",
-    "gh-pages": "^4.0.0"
+    "gh-pages": "^4.0.0",
+    "parcel": "^2.6.2"
   },
   "dependencies": {
-    "bulma": "^0.9.4"
+    "bulma": "^0.9.4",
+    "cash-dom": "^8.1.1",
+    "feather-icons": "^4.29.0"
   },
   "targets": {
     "main": false
