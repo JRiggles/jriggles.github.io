@@ -6,85 +6,87 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     link(rel="preconnect" href="https://fonts.googleapis.com")
     link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
-    link(href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet")
     link(rel="stylesheet" href="./scss/main.scss")
-    //- script(src="https://cdnjs.cloudflare.com/ajax/libs/cash/8.1.1/cash.min.js" defer)
-    //- script(src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js" defer)
     script(src="./js/main.js" type="module" defer)
     title John Riggles - Software Dev
+
   body
-    section
-      #landing.hero.is-fullheight.is-black.has-background
-        img.hero-background.is-transparent(src="./img/IMG_0886.png" draggable="false")
-        .hero-body
-          .container
-            h1.title My name is John Riggles
-            h3.subtitle I write code
-        nav.hero-foot
-            .tabs.is-boxed.is-centered.is-fullwidth.is-medium
-              .container
-                ul
-                  li#nav1
-                    a(href="#AboutMe") About Me
-                  li#nav2
-                    a(href="#Projects") Projects
-                  li#nav3
-                    a(href="#MyCV") My CV
-                  li#nav4
-                    a(href="#WhatElse") What Else...
-    section#AboutMe
-      .hero.is-fullheight.is-black
-        .hero-body
-          .container
-            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, mollitia a ad quasi cupiditate error dicta minus, deleniti quidem illum sunt quae ex repellat sed magni, quis veniam. Dicta, nihil.
-            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae ipsa possimus quae suscipit error odit. Soluta perspiciatis eos voluptatum, aliquam quaerat rerum libero, veritatis, facere sequi nostrum qui vero consequatur!
-    section#Projects
-      .hero.is-fullheight.is-black
-        .hero-body
-          .container
-            p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam sapiente asperiores, illo quasi laboriosam aspernatur quibusdam consequatur reiciendis at ducimus eaque dicta! Natus quo accusamus vitae quod quaerat obcaecati voluptatibus?
-            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate laboriosam voluptatem ipsa veritatis doloribus vero maiores quod, distinctio ea voluptates ipsam assumenda similique, expedita voluptas commodi tenetur animi nostrum sint!
-    section#MyCV
-      .hero.is-fullheight.is-black
-        .hero-body
-          .container
-            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ut quisquam veritatis voluptate, distinctio reiciendis voluptatibus tempora ipsam deserunt excepturi mollitia nobis sit vel assumenda. Accusamus eos quibusdam odio itaque?
-            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio rem quis sequi veniam tempore quaerat minus consequuntur qui quos quam molestiae sed aliquid laudantium fugit, impedit quas incidunt omnis? Veniam?
-    section#WhatElse
-      .hero.is-fullheight.is-black
-        .hero-body
-          .container
-            p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto quod quisquam facere minus laudantium natus autem omnis. Consequuntur et sequi dicta neque ipsa reiciendis unde, maiores eius culpa quasi quia?
-            p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, temporibus blanditiis eveniet quasi placeat earum dignissimos rerum assumenda voluptas id libero! Doloremque cupiditate doloribus sint aspernatur tempora et quaerat. Omnis?
-//- .hero-foot
-//-   .tabs.is-fullwidth
-//-     .container
-//-       ul
-//-         li
-//-           a(href="#landing").jump-button
-//-             span(data-feather="chevron-up")
-section.footer
-  .content.has-text-centered
-    p
-    |
-    | 2022
-    |
-    strong John Riggles
-    |
-    | -
-    |
-    | Project source code is licensed
-    |
-    a(
-      href="http://opensource.org/licenses/mit-license.php",
-      target="_blank"
-    ).has-text-weight-bold.is-underlined MIT
-    |
-    | unless otherwise marked.
-    |
-    | This website's content is licensed
-    |
-    a(
-      href="http://creativecommons.org/licenses/by-nc-nd/4.0/",
-      target="_blank"
-    ).has-text-weight-bold.is-underlined CC BY NC ND 4.0
+    .hero.is-black.is-small
+      .hero-body
+        span(data-feather="terminal")
+        p Engineer, programmer, musician, geek.
+
+    header.level
+      .level-item.has-text-centered
+        div
+          figure.image.is-128x128
+            //- get image from Gravatar
+            img(src="https://gravatar.com/avatar/dba82bba7f55a079f995ca6be54ff100783a01b8f8e9d300f28855500bfec45b?d=mp&r=g&s=512"
+            style="height: 128px; width: 128px").is-rounded.gravatar
+          p.heading.has-text-centered John Riggles
+          p.tag he/him
+
+      .level-item.has-text-centered
+        div
+          p.heading follow me on mastodon
+          a(
+            href="https://mastodon.social/@sudo_whoami" target="_blank"
+          ).title.is-5 @sudo_whoami
+
+      .level-item.has-text-centered
+        div
+          p.heading stackoverflow
+          a(
+            href="https://stackoverflow.com/users/8512262/jriggles" target="_blank"
+          ).tag.is-5#reputation working...&nbsp;
+            span.has-loader#reputationPlaceholder
+
+      .level-item.has-text-centered
+        div
+          //- top stackoverflow tags populated by main.js
+          p.heading top tags
+          span.tags#topTags
+            span.tag#tagPlaceholder working...&nbsp;
+              span.has-loader
+
+      .level-item.has-text-centered
+        div
+          p.heading github contributions
+          a(href="https://github.com/JRiggles" target="_blank")
+            img(src="https://ghchart.rshah.org/JRiggles" alt="GitHub contributions for JRiggles").contrib-graph
+
+    section#main
+      .title.is-4 About me
+      p I'm a self-taught Pythonista with a background in audio and electronics engineering. I write code for a living, with a focus on data acquisition and UI/UX. I'm working on a few other projects in my spare time, too!
+      br
+      p Here are some of the highlights:
+      br
+      ul
+        li - <a href="https://github.com/JRiggles/DELPHI-kbd" target="_blank">DELPHI</a>, a fully custom mechanical keyboard
+        li - <a href="https://reverb.com/shop/tonegrove" target="_blank">Tonegrove</a>, guitar effects handmade by me
+
+    section.footer.sticky-bottom
+      .content.has-text-centered
+        p
+        | &copy;2022-24
+        |
+        strong John Riggles
+        |
+        | -
+        |
+        | Project source code is licensed
+        |
+        a(
+          href="http://opensource.org/licenses/mit-license.php",
+          target="_blank"
+        ).has-text-weight-bold.is-underlined MIT
+        |
+        | unless otherwise marked.
+        |
+        | This website's content is licensed
+        |
+        a(
+          href="http://creativecommons.org/licenses/by-nc-nd/4.0/",
+          target="_blank"
+        ).has-text-weight-bold.is-underlined CC BY NC ND 4.0

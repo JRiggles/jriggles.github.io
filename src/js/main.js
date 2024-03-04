@@ -1,71 +1,76 @@
-import $ from 'cash-dom'
 import * as feather from 'feather-icons'
 
-$(document).ready(() => {
-    feather.replace()
-    var landingColors = [
-        // 'is-dark',
-        'is-primary',
-        // 'is-link',
-        'is-info',
-        // 'is-warning',
-        'is-danger',
-    ];
-    // set landing hero to a random background color
-    $('#landing').each(function() {
-        $(this).addClass(
-            landingColors[~~(Math.random()*landingColors.length)]
-        );
-    });
-});
 
-window.onscroll = function() {updateNav()};
+window.addEventListener('load', function() {
+    feather.replace();
+    // getSoReputation();
+    // getSoTags(2);
+})
 
-var navHeight = 50;
-// Add the sticky class to the navbar when you reach its scroll position.
-// Remove 'sticky' when you leave the scroll position
-function updateNav() {
-    if (window.pageYOffset >= window.innerHeight - navHeight) {
-        $('nav').addClass('sticky')
-        $('nav > .tabs').removeClass('is-boxed');
-        $('nav li').each(function() {
-            $(this).removeClass('is-active');
+
+function getSoReputation() {
+    const apiUrl = 'https://api.stackexchange.com/2.3/users/8512262?site=stackoverflow';
+
+    fetch(apiUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            let reputationText = document.getElementById('reputation');
+            if (data.items.length > 0) {
+                let repValue = data.items[0].reputation;
+                reputationText.innerText = repValue.toLocaleString();
+                repValue.classList.add('is-dark');
+            } else {
+                reputationText.innerText = '----';
+            }
+        })
+        .catch(_error => {
+            let reputationText = document.getElementById('reputation');
+            reputationText.innerText = 'error fetching reputation';
+            reputationText.classList.add('is-danger');
         });
-    } else {
-        $('nav').removeClass('sticky')
-        $('nav > .tabs').addClass('is-boxed')
-    }
-    // REFACTOR THIS - lots of repeated code here
-    if (window.pageYOffset >= window.innerHeight) {
-        $('nav li').each(function() {
-            $(this).removeClass('is-active is-underlined');
-        });
-        $('#nav1').addClass('is-active is-underlined');
-    }
-    if (window.pageYOffset >= (window.innerHeight * 2)) {
-        $('nav li').each(function() {
-            $(this).removeClass('is-active is-underlined');
-        });
-        $('#nav2').addClass('is-active is-underlined');
-    }
-    if (window.pageYOffset >= (window.innerHeight * 3)) {
-        $('nav li').each(function() {
-            $(this).removeClass('is-active is-underlined');
-        });
-        $('#nav3').addClass('is-active is-underlined');
-    }
-    if (window.pageYOffset >= (window.innerHeight * 4)) {
-        console.log('2');
-        $('nav li').each(function() {
-            $(this).removeClass('is-active is-underlined');
-        });
-        $('#nav4').addClass('is-active is-underlined');
-    }
 }
 
-$('nav li').on('click', function(){
-    $('nav li').each(function() {
-        $(this).removeClass('is-active');
-    });
-    $(this).addClass('is-active');
-});
+
+function getSoTags(nTags) {
+    const apiUrl = 'https://api.stackexchange.com/2.3/users/8512262/tags?site=stackoverflow';
+    const soUserUrl = 'https://stackoverflow.com/search?q=user:8512262'
+
+    fetch(apiUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data.items.length > 0) {
+                // hide placeholder
+                let placeholder = document.getElementById('tagPlaceholder');
+                placeholder.style.display = 'none';
+                // load tags
+                let topTags = data.items.slice(0, nTags).map(tag => tag.name);
+                console.log(topTags);
+                let tagContainer = document.getElementById('topTags');
+                topTags.forEach(tag => {
+                    let tagLink = document.createElement('a');
+                    tagLink.href = `${soUserUrl}+[${tag}]`;
+                    tagLink.target = '_blank';
+                    tagLink.innerText = tag;
+                    tagLink.classList.add('tag', 'is-link');
+                    tagContainer.appendChild(tagLink);
+                });
+            }
+        })
+        .catch(error => {
+            console.log(error);
+            let placeholder = document.getElementById('tagPlaceholder')
+            placeholder.innerText = 'error fetching tags';
+            placeholder.classList.add('is-danger');
+
+        });
+}

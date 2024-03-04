@@ -19,15 +19,14 @@
   },
   "homepage": "https://github.com/JRiggles/jriggles.github.io#readme",
   "devDependencies": {
-    "@parcel/transformer-pug": "^2.6.2",
-    "@parcel/transformer-sass": "^2.6.2",
+    "@parcel/transformer-pug": "^2.12.0",
+    "@parcel/transformer-sass": "^2.12.0",
     "gh-pages": "^4.0.0",
-    "parcel": "^2.6.2"
+    "parcel": "^2.12.0"
   },
   "dependencies": {
     "bulma": "^0.9.4",
-    "cash-dom": "^8.1.1",
-    "feather-icons": "^4.29.0"
+    "feather-icons": "^4.29.1"
   },
   "targets": {
     "main": false

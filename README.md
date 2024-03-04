@@ -4,7 +4,6 @@ My personal site - built with:
 - [Pug](https://pugjs.org/api/getting-started.html)
 - [Bulma](https://bulma.io/)
 - [Sass](https://sass-lang.com/)
-- [Cash](https://github.com/fabiospampinato/cash)
 - [Parcel](https://parceljs.org/)
 
 *Also reachable at [jriggl.es](https://jriggl.es)*
