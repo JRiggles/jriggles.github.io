@@ -5,7 +5,7 @@
   "main": "src/js/index.js",
   "scripts": {
     "dev": "parcel src/index.pug",
-    "predeploy": "rm -rf dist && parcel build src/index.pug --public-url 'https://github.com/JRiggles/jriggles.github.io' && cp CNAME ./dist && cp ./src/img/IQS5xx.py.svg ./src/static",
+    "predeploy": "rm -rf dist && parcel build src/index.pug --public-url 'https://github.com/JRiggles/jriggles.github.io' && cp CNAME ./dist && cp ./src/img/IQS5xx.py.svg ./static",
     "deploy": "gh-pages -d dist"
   },
   "repository": {
