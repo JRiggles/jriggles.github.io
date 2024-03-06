@@ -1,11 +1,20 @@
 html, body {
+	display: flex;
+	flex-direction: column;
 	font-family: "IBM Plex Mono", "Menlo", monospace;
-	scroll-behavior: smooth;
 	font-weight: 400;
+	height: 100%;
+	min-height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+	scroll-behavior: smooth;
 }
 
-@include mobile {
-	.contrib-graph {
+.contrib-graph {
+	@include tablet {
+		padding-right: 1.5rem;
+	}
+	@include mobile {
 		padding-left: 1rem;
 		padding-right: 1rem;
 	}
@@ -22,42 +31,40 @@ html, body {
 .gravatar {
 	padding: 1rem;
 	transform: scale(1.0);
-	transition: all 0.2s ease;
+	transition: all 0.2s $easing;
 	&:hover {
 		transform: scale(1.1);
+		transition: all 0.2s $easing;
+	}
+}
+
+#main, #projects {
+	margin: 2rem;
+}
+
+.panel {
+	.panel-heading {
+		background-color: $light;
+		color: $black;
 		transition: all 0.2s ease;
 	}
-}
-
-::-webkit-scrollbar {
-	width: 0.33rem;
-	&-track {
-		background: $dark;
+	&:hover > .panel-heading {
+		background-color: $primary;
+		color: $light;
+		transition: all 0.2s $easing;
 	}
-	&-thumb {
-		background: darken($light, 43%);
-		border-radius: 0.25rem;
-		&:hover {
-			color: $primary;
-		}
+	img {
+		padding-top: 0.1rem;
+		padding-bottom: 0.1rem;
+		border-radius: $radius-large;
 	}
-}
-
-#main {
-	padding: 2rem;
-}
-
-.sticky-bottom {
-	position: fixed;
-	bottom: 0;
-	width: 100%;
 }
 
 .footer {
-	height: 2em;
+	height: 2rem;
 	a {
-	color: $black;
-	transition: color 0.1s $easing;
+		color: $black;
+		transition: color 0.1s $easing;
 		&:hover {
 			color: $link;
 			transition: color 0.1s $easing;

@@ -1,19 +1,19 @@
 import * as feather from 'feather-icons'
 
-const STACKEXAPIKEY = ")q0PGY5frwc43NqR*gt6hQ((";
+const STACKEXAPIURL = 'https://api.stackexchange.com/2.3/users/8512262'
+const STACKEXAPIKEY = ')q0PGY5frwc43NqR*gt6hQ((';  // public key
 
 
 window.addEventListener('load', function() {
     feather.replace();
     getSoReputation();
-    getSoTags(2);
+    getSoTags(2);  // get top 2 stackoverflow tags
 });
 
 
 function getSoReputation() {
-    const apiUrl = 'https://api.stackexchange.com/2.3/users/8512262?site=stackoverflow';
-
-    fetch(apiUrl + "&key=" + STACKEXAPIKEY)
+    let reputationText = document.getElementById('reputation');
+    fetch(STACKEXAPIURL + "?site=stackoverflow&key=" + STACKEXAPIKEY)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -21,26 +21,24 @@ function getSoReputation() {
             return response.json();
         })
         .then(data => {
-            let reputationText = document.getElementById('reputation');
             if (data.items.length > 0) {
                 let repValue = data.items[0].reputation;
                 reputationText.innerText = repValue.toLocaleString();
                 reputationText.classList.add('is-dark');
             }
         })
-        .catch(_error => {
-            let reputationText = document.getElementById('reputation');
-            reputationText.innerText = 'error fetching reputation';
+        .catch(error => {
+            console.log(error);
+            reputationText.innerText = 'error';
             reputationText.classList.add('is-danger');
         });
 }
 
 
 function getSoTags(nTags) {
-    const apiUrl = 'https://api.stackexchange.com/2.3/users/8512262/tags?site=stackoverflow';
     const soUserUrl = 'https://stackoverflow.com/search?q=user:8512262'
-
-    fetch(apiUrl + "&key=" + STACKEXAPIKEY)
+    let placeholder = document.getElementById('tagPlaceholder');
+    fetch(STACKEXAPIURL + "/tags?site=stackoverflow&key=" + STACKEXAPIKEY)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -48,7 +46,6 @@ function getSoTags(nTags) {
             return response.json();
         })
         .then(data => {
-            let placeholder = document.getElementById('tagPlaceholder');
             if (data.items.length > 0) {
                 // hide placeholder
                 placeholder.style.display = 'none';
@@ -67,9 +64,7 @@ function getSoTags(nTags) {
         })
         .catch(error => {
             console.log(error);
-            let placeholder = document.getElementById('tagPlaceholder')
-            placeholder.innerText = 'error fetching tags';
+            placeholder.innerText = 'error';
             placeholder.classList.add('is-danger');
-
         });
 }
