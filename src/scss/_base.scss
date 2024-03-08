@@ -1,73 +1,94 @@
-html, body {
-	display: flex;
-	flex-direction: column;
-	font-family: "IBM Plex Mono", "Menlo", monospace;
-	font-weight: 400;
-	height: 100%;
-	min-height: 100vh;
-	overflow-x: hidden;
-	overflow-y: auto;
-	scroll-behavior: smooth;
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "IBM Plex Mono", "Menlo", monospace;
+  font-weight: 400;
+  height: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+header {
+  @include mobile {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+
+abbr {
+  cursor: help;
+}
+
+p{
+  text-indent: 2ch;
 }
 
 .contrib-graph {
-	@include tablet {
-		padding-right: 1.5rem;
-	}
-	@include mobile {
-		padding-left: 1rem;
-		padding-right: 1rem;
-	}
+  @include tablet {
+    padding-right: 1.5rem;
+  }
+  @include mobile {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 .has-loader {
-	@include loader;
+  @include loader;
 }
 
 .hero {
-	margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .gravatar {
-	padding: 1rem;
-	transform: scale(1.0);
-	transition: all 0.2s $easing;
-	&:hover {
-		transform: scale(1.1);
-		transition: all 0.2s $easing;
-	}
+  padding: 1rem;
+  transform: scale(1);
+  transition: all 0.2s $easing;
+  &:hover {
+    transform: scale(1.1);
+    transition: all 0.2s $easing;
+  }
 }
 
-#main, #projects {
-	margin: 2rem;
+#main,
+#projects {
+  margin: 2rem;
+}
+
+#topTags a {
+  text-decoration: none;
 }
 
 .panel {
-	.panel-heading {
-		background-color: $light;
-		color: $black;
-		transition: all 0.2s ease;
-	}
-	&:hover > .panel-heading {
-		background-color: $primary;
-		color: $light;
-		transition: all 0.2s $easing;
-	}
-	img {
-		padding-top: 0.1rem;
-		padding-bottom: 0.1rem;
-		border-radius: $radius-large;
-	}
+  .panel-heading {
+    background-color: $light;
+    color: $black;
+    transition: all 0.2s ease;
+  }
+  &:hover > .panel-heading {
+    background-color: $primary;
+    color: $light;
+    transition: all 0.2s $easing;
+  }
+  img {
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    border-radius: $radius-large;
+  }
 }
 
 .footer {
-	height: 2rem;
-	a {
-		color: $black;
-		transition: color 0.1s $easing;
-		&:hover {
-			color: $link;
-			transition: color 0.1s $easing;
-		}
-	}
+  height: 2rem;
+  a {
+    color: $black;
+    transition: color 0.1s $easing;
+    &:hover {
+      color: $link;
+      transition: color 0.1s $easing;
+    }
+  }
 }
