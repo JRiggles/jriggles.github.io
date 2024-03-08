@@ -44,16 +44,15 @@ html(lang="en")
           p.heading stackoverflow
           a(
             href="https://stackoverflow.com/users/8512262/jriggles" target="_blank"
-          ).tag.is-medium#reputation working...&nbsp;
-            span.has-loader#reputationPlaceholder
+          )
+            span.tag.is-medium#reputationTag
 
       //- top stackoverflow tags populated by main.js
       .level-item.has-text-centered
         div
           p.heading top tags
           span.tags.are-medium#topTags
-            span.tag#tagPlaceholder working...&nbsp;
-              span.has-loader
+            span.tag#placeholderTag
 
       .level-item.has-text-centered
         div
@@ -65,12 +64,18 @@ html(lang="en")
             ).contrib-graph
 
     section#main
-      p.title.is-family-secondary.is-4 About me
-      p I'm a self-taught Pythonista with a background in audio and electronics engineering. I write code for a living, with a focus on data acquisition and UI/UX. In my off time, I play the guitar, fix things, and make new things!
+      .title.is-family-secondary.is-4 About me
+      p I'm a self-taught Pythonista with a background in audio and electronics engineering. I write code for a living, with a focus on data acquisition and UI/UX. In my off time, I play the guitar, fix things, and make new things. My current passion project is my custom-designed mechanical keyboard called <abbr title="Dual Ergolinear Low-Profile Human Interface">DELPHI</abbr>. You can learn more about it below.
+      br
+      p My tecnical areas of interest include (in no particular order) mechanical keyboards, guitar tech, PCB design, MSLA (resin) 3D printing, web dev, game dev, dgraphic design, and more...
+      br
+      p My <i>non-technical</i> areas of interest include Dungeons &amp; Dragons, astronomy and astropyhsics, craft beer, pixel art, linguistics, video games, cooking, and science fiction just to name a few!
 
     section#projects
-      p.title.is-family-secondary.is-4 Projects
-      p Almost every project starts as an excuse to learn something new (or practice something I've learned). Here's what I'm working on when I'm not at my day job...
+      .title.is-family-secondary.is-4 Projects
+      p Almost every project starts as an excuse to learn something new or practice something I've learned.
+      br
+      p Here's what I'm working on when I'm not at my day job (click the images to explore further):
       br
       .columns
         .column
@@ -83,7 +88,7 @@ html(lang="en")
                   alt="a photo of my custom keyboard called DELPHI"
                 )
             .panel-block
-              p.is-family-primary A.K.A. "Dual Ergolinear Low-Profile Human Interface" - DELPHI is a minimal split mechanical keyboard designed to combine ergonomics and an ortholinear layout into a small form factor.
+              p.is-family-primary A.K.A. "Dual Ergolinear Low-Profile Human Interface". DELPHI is a minimal split mechanical keyboard designed to combine ergonomics and an ortholinear layout into a small form factor.
             .panel-footer
               .panel-block
                 span.tags.heading made with&nbsp;
@@ -101,7 +106,7 @@ html(lang="en")
                   alt="a photo of a guitar booster pedal I call 'Seedling'"
                 )
             .panel-block
-              p.is-family-primary Guitar effects designed and hand-built by me. My first design, an ultra-clean booster / buffer called "Seedling", is available now. Please consider supporting my Reverb shop!
+              p.is-family-primary Tonegrove is my brand for guitar effects pedals designed and hand-built by me. My first design, an ultra-clean booster/buffer called "Seedling", is available now. If you're interested, please consider supporting my Reverb shop!
             .panel-footer
               .panel-block
                 span.tags.heading made with&nbsp;
@@ -118,36 +123,34 @@ html(lang="en")
                   src="static/IQS5xx.py.svg" alt="an image of partial source code"
                 )
             .panel-block.is-family-primary
-              p A CircuitPython library for trackpad modules from Azoteq
+              p A CircuitPython library for the TPS43 and TPS65 trackpad modules from Azoteq.
             .panel-footer
               .panel-block
                 span.tags.heading made with&nbsp;
                   span.tag CircuitPython
                   span.tag.is-dark WIP
 
+    p.content.heading.has-text-centered If you'd like to know more about how I built this site, you can check out the source code on the&nbsp;
+      a(href="https://github.com/JRiggles/jriggles.github.io" target="_blank") GitHub repo
+
     footer.footer
       .content.has-text-centered.is-size-7.is-dark
         p
-        | &copy;2022-24
-        |
+        | &copy;2022-24&nbsp;
         strong John Riggles
         |
-        | -
-        |
-        | Project source code is licensed
+        | | Project source code is licensed
         |
         a(
           href="http://opensource.org/licenses/mit-license.php",
           target="_blank"
         ).has-text-weight-bold.is-underlined MIT
         |
-        | unless otherwise marked.
-        |
-        | This website's content is licensed
+        | unless otherwise marked. This website's content is licensed
         |
         a(
-          href="http://creativecommons.org/licenses/by-nc-nd/4.0/",
+          href="https://creativecommons.org/licenses/by-nc-sa/4.0/",
           target="_blank"
-        ).has-text-weight-bold.is-underlined CC BY NC ND 4.0
+        ).has-text-weight-bold.is-underlined CC BY NC SA 4.0
         br
-        p - All copyrights are property of their respective owners -
+        p - All trademarks are property of their respective owners -
