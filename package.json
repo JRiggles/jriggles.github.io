@@ -6,7 +6,7 @@
   "scripts": {
     "_static_copy": "mkdir ./dist/static && cp ./src/img/IQS5xx.py.svg ./dist/static/",
     "dev": "parcel src/index.pug",
-    "predeploy": "rm -rf dist && parcel build src/index.pug --public-url 'https://github.com/JRiggles/jriggles.github.io' && cp CNAME ./dist && npm run _static_copy",
+    "predeploy": "rm -rf .parcel-cache && rm -rf dist && parcel build src/index.pug --public-url 'https://github.com/JRiggles/jriggles.github.io' && cp CNAME ./dist && npm run _static_copy",
     "deploy": "gh-pages -d dist",
     "clean gh-pages cache": "node node_modules/gh-pages/bin/gh-pages-clean"
   },
