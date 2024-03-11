@@ -1,15 +1,20 @@
 html,
 body {
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
   font-family: "IBM Plex Mono", "Menlo", monospace;
-  font-weight: 400;
+  font-weight: 500;
   height: 100%;
   min-height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
   scroll-behavior: smooth;
 }
+
+// body.dark {
+//   background-color: $dark;
+//   color: $light;
+// }
 
 header {
   @include mobile {
@@ -22,7 +27,7 @@ abbr {
   cursor: help;
 }
 
-section > p{
+section > p {
   text-indent: 2ch;
 }
 
@@ -55,7 +60,8 @@ section > p{
 }
 
 #main,
-#projects {
+#projects,
+#PS {
   margin: 2rem;
 }
 
@@ -67,7 +73,7 @@ section > p{
   .panel-heading {
     background-color: $light;
     color: $black;
-    transition: all 0.2s ease;
+    transition: all 0.2s $easing;
   }
   &:hover > .panel-heading {
     background-color: $primary;
@@ -82,7 +88,6 @@ section > p{
 }
 
 .footer {
-  height: 2rem;
   a {
     color: $black;
     transition: color 0.1s $easing;
