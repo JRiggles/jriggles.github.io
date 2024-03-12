@@ -4,11 +4,12 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.googleapis.com" crossorigin)
     link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
-    link(href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet")
-    link(rel="stylesheet" href="./scss/main.scss")
-    script(src="./js/main.js" type="module" defer)
+    link(href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet" type="text/css")
+    link(href="./scss/main.scss" rel="stylesheet" type="text/css")
+    script(src="../node_modules/feather-icons/dist/feather.min.js" type="application/javascript" defer)
+    script(src="./js/main.js" type="application/javasrcipt" defer)
     title John Riggles - Engineer
 
   body
@@ -16,11 +17,13 @@ html(lang="en")
       .hero-body
         .columns.is-mobile
           .column.is-narrow
-            span(data-feather="terminal")
+            img(data-feather="terminal")
           .column.has-text-left
             p Engineer, programmer, musician, geek.
           //- .column
-            //- span(data-feather="moon").is-pulled-right.is-clearfix.is-clickable#darkModeToggle
+          //-   img(
+          //-     data-feather="moon" data-toggle="sun" role="button"
+          //-   ).is-pulled-right.is-clearfix.is-clickable#darkMode
 
     header.level
       .level-item.has-text-centered
