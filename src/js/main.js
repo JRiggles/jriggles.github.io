@@ -1,8 +1,8 @@
-const STACKEXAPIURL = "https://api.stackexchange.com/2.3/users/8512262";
-const STACKEXAPIKEY = ")q0PGY5frwc43NqR*gt6hQ(("; // public key
+var STACKEXAPIURL = "https://api.stackexchange.com/2.3/users/8512262";
+var STACKEXAPIKEY = ")q0PGY5frwc43NqR*gt6hQ(("; // public key
 // StackOverflow data
-let repTag = document.getElementById("reputationTag");
-let phTag = document.getElementById("placeholderTag");
+var repTag = document.getElementById("reputationTag");
+var phTag = document.getElementById("placeholderTag");
 showTagLoader(repTag);
 showTagLoader(phTag);
 // run on page load
@@ -50,7 +50,7 @@ function getSoReputation() {
 }
 
 function getSoTags(nTags) {
-  const soUserUrl = "https://stackoverflow.com/search?q=user:8512262";
+  var SOUSERURL = "https://stackoverflow.com/search?q=user:8512262";
   fetch(STACKEXAPIURL + "/tags?site=stackoverflow&key=" + STACKEXAPIKEY)
     .then((response) => {
       return handleTagResponse(response);
@@ -64,7 +64,7 @@ function getSoTags(nTags) {
         let tagContainer = document.getElementById("topTags");
         topTagNames.forEach((tag) => {
           let tagLink = document.createElement("a");
-          tagLink.href = `${soUserUrl}+[${tag}]`;
+          tagLink.href = `${SOUSERURL}+[${tag}]`;
           tagLink.target = "_blank";
           tagLink.innerText = tag;
           tagLink.classList.add("tag", "is-info");
