@@ -1,10 +1,10 @@
 const STACKEXAPIURL = "https://api.stackexchange.com/2.3/users/8512262";
 const STACKEXAPIKEY = ")q0PGY5frwc43NqR*gt6hQ(("; // public key
 // StackOverflow data
-var reputationTag = document.getElementById("reputationTag");
-var placeholderTag = document.getElementById("placeholderTag");
-showTagLoader(reputationTag);
-showTagLoader(placeholderTag);
+let repTag = document.getElementById("reputationTag");
+let phTag = document.getElementById("placeholderTag");
+showTagLoader(repTag);
+showTagLoader(phTag);
 // run on page load
 document.addEventListener("DOMContentLoaded", () => {
   feather.replace();
