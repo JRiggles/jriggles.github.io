@@ -40,12 +40,12 @@ function getSoReputation() {
     .then((data) => {
       if (data.items.length > 0) {
         let repValue = data.items[0].reputation;
-        reputationTag.innerText = repValue.toLocaleString();
-        reputationTag.classList.add("is-dark");
+        repTag.innerText = repValue.toLocaleString();
+        repTag.classList.add("is-dark");
       }
     })
     .catch((error) => {
-      handleTagError(reputationTag, error);
+      handleTagError(repTag, error);
     });
 }
 
@@ -58,7 +58,7 @@ function getSoTags(nTags) {
     .then((data) => {
       if (data.items.length > 0) {
         // hide placeholder
-        placeholderTag.style.display = "none";
+        phTag.style.display = "none";
         // load tags
         let topTagNames = data.items.slice(0, nTags).map((tag) => tag.name);
         let tagContainer = document.getElementById("topTags");
@@ -73,6 +73,6 @@ function getSoTags(nTags) {
       }
     })
     .catch((error) => {
-      handleTagError(placeholderTag, error);
+      handleTagError(phTag, error);
     });
 }
