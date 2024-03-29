@@ -7,7 +7,8 @@ html(lang="en")
     link(rel="shortcut icon" type="image/gif" href="favicon.gif")
     link(rel="preconnect" href="https://fonts.googleapis.com" crossorigin)
     link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
-    link(href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet" type="text/css")
+    link(href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" type="text/css")
+    link(href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet" type="text/css")
     link(href="./scss/main.scss" rel="stylesheet" type="text/css")
     script(src="../node_modules/feather-icons/dist/feather.min.js" type="text/javascript" defer)
     script(src="./js/main.js" type="text/javasrcipt" defer)
@@ -123,6 +124,23 @@ html(lang="en")
 
         .column
           .panel.is-light
+            .panel-heading.is-family-secondary Lospec Palette Importer
+            .panel-block
+              a(href="https://sudo-whoami.itch.io/lospec-palette-importer" target="_blank")
+                img(
+                  src="https://img.itch.zone/aW1hZ2UvMjYxMjY4NS8xNTU2MTcxNy5wbmc=/original/00bJ8m.png"
+                  alt="a screenshot of my Aseprite extension 'Lospec Palette Importer'"
+                )
+            .panel-block
+              p.is-family-primary This Aseprite extension allows you to import and use color palettes from Lospec.com. It's available as a "pay what you want" tool on itch.io. If you find it useful, please consider donating to support further development!
+            .panel-footer
+              .panel-block
+                span.tags.heading made with&nbsp;
+                  span.tag Aseprite
+                  span.tag Lua
+
+        .column
+          .panel.is-light
             .panel-heading.is-family-secondary IQS5XX
             .panel-block
               a(href="https://github.com/JRiggles/IQS5XX" target="_blank")
@@ -135,7 +153,7 @@ html(lang="en")
               .panel-block
                 span.tags.heading made with&nbsp;
                   span.tag CircuitPython
-                  span.tag.is-dark WIP
+                  //- span.tag.is-dark WIP
 
     p.content.heading.has-text-centered#PS If you'd like to know more about how I built this site, you can check out the source code on&nbsp;
       a(href="https://github.com/JRiggles/jriggles.github.io" target="_blank") GitHub
