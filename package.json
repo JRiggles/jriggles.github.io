@@ -4,7 +4,7 @@
   "description": "My personal website",
   "main": "src/js/index.js",
   "scripts": {
-    "copy static files": "mkdir ./dist/static && cp ./src/img/IQS5xx.py.svg ./dist/static/",
+    "copy static files": "mkdir ./dist/static && cp -R ./src/img/. ./dist/static",
     "dev": "npx parcel src/index.pug",
     "predeploy": "rm -rf .parcel-cache && rm -rf dist && npx parcel build src/index.pug --public-url 'https://jriggles.github.io/' && cp CNAME ./dist && npm run 'copy static files'",
     "deploy": "npx gh-pages -d dist",
