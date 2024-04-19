@@ -6,7 +6,7 @@
   "scripts": {
     "copy static files": "mkdir ./dist/static && cp -R ./src/img/. ./dist/static",
     "dev": "npx parcel src/index.pug",
-    "predeploy": "rm -rf .parcel-cache && rm -rf dist && npx parcel build src/index.pug --public-url 'https://jriggles.github.io/' && cp CNAME ./dist && npm run 'copy static files'",
+    "predeploy": "rm -rf .parcel-cache && rm -rf dist && npx parcel build src/index.pug --public-url 'https://jriggles.github.io/' && cp CNAME ./dist",
     "deploy": "npx gh-pages -d dist",
     "clean gh-pages cache": "node node_modules/gh-pages/bin/gh-pages-clean"
   },
