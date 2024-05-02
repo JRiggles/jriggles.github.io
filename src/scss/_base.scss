@@ -9,22 +9,34 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   scroll-behavior: smooth;
-}
 
+}
 // body.dark {
 //   background-color: $dark;
 //   color: $light;
 // }
 
-header {
-  @include mobile {
+section > * {
+  @include desktop {
     margin-left: 2rem;
     margin-right: 2rem;
   }
 }
 
+header {
+  @include desktop {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  // @include mobile {
+  //   margin-left: 2rem;
+  //   margin-right: 2rem;
+  // }
+}
+
 abbr {
   cursor: help;
+  font-weight: 600;
 }
 
 section > p {
@@ -70,6 +82,9 @@ section > p {
 }
 
 .panel {
+  @include desktop {
+    margin-top: 0.5rem;
+  }
   .panel-heading {
     background-color: $light;
     color: $black;
