@@ -1,3 +1,29 @@
+function koco(callback) {
+	const keyPhrase = [
+		"ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a", "Enter"
+	];
+	let index = 0;
+
+	document.addEventListener("keyup", (event) => { // get the key that was pressed
+		event.key === keyPhrase[index] ? index++ : index = 0;
+		if (index === keyPhrase.length) { // if the entire keyPhrase is entered correctly...
+			index = 0; // clear the index so we can use this function again
+			callback(); // call the passed-in function
+		}
+	});
+}
+
+function launch() {
+  console.log("party time!");
+  confetti({
+    particleCount: 256,
+    spread: 128,
+    origin: { y: 0.5 },
+    shapes: ["circle", "square", "triangle"],
+    colors: ["#EE3243", "#F4A312", "#18B990", "#5384DC", "#AA55BB",]
+  });
+}
+
 var STACKEXAPIURL = "https://api.stackexchange.com/2.3/users/8512262";
 var STACKEXAPIKEY = ")q0PGY5frwc43NqR*gt6hQ(("; // public key
 // StackOverflow data
@@ -10,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
   feather.replace();
   getSoReputation();
   getSoTags(2); // get top 2 stackoverflow tags
+  koco(launch);  // set up super secret suprise
 });
 
 function showTagLoader(tagElement) {
