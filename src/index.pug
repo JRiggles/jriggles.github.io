@@ -11,6 +11,7 @@ html(lang="en")
     link(href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet" type="text/css")
     link(href="./scss/main.scss" rel="stylesheet" type="text/css")
     script(src="../node_modules/feather-icons/dist/feather.min.js" type="text/javascript" defer)
+    script(src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js" type="text/javascript" defer)
     script(src="./js/main.js" type="text/javasrcipt" defer)
     title John Riggles
 
@@ -75,18 +76,34 @@ html(lang="en")
 
     section#main
       .title.is-family-secondary.is-4 About me
-      p I'm a self-taught Pythonista with a background in audio and electronics engineering. I write code for a living, with a focus on data acquisition and UI/UX. In my off time, I play the guitar, fix things, and make new things. My latest hardware project is my custom-designed mechanical keyboard called <abbr title="Dual Ergolinear Low-Profile Human Interface">DELPHI</abbr>. You can learn more about it and some of my other open-source projects below.
+      p I'm a self-taught full-stack Pythonista with a background in audio and electronics engineering. I write code for a living, with a focus on data acquisition and UI/UX. In my off time I play the guitar, fix things, and make new things. You can learn more about some of my projects below - most of them are open source!
       br
       p My tecnical areas of interest include (in no particular order) mechanical keyboards, guitar tech, PCB design, MSLA (resin) 3D printing, web dev, game dev, graphic design, and more...
       br
-      p My <i>non-technical</i> areas of interest include Dungeons &amp; Dragons, astronomy and astropyhsics, craft beer, pixel art, linguistics, video games, cooking, and science fiction just to name a few!
+      p My non-technical areas of interest include Dungeons &amp; Dragons, astronomy and astropyhsics, craft beer, pixel art, linguistics, video games, cooking, and science fiction just to name a few!
 
     section#projects
       .title.is-family-secondary.is-4 Projects
       p Almost every project starts as an excuse to learn something new or practice something I've learned. Here's what I've been working on lately:
       br
-      .columns
-        .column
+      .columns.is-multiline
+        .column.is-one-third
+          .panel.is-light
+            .panel-heading.is-family-secondary tkfeather
+            .panel-block
+              a(href="https://github.com/JRiggles/tkfeather" target="_blank")
+                img(
+                  src="https://www.dropbox.com/scl/fi/n170vuui29uhwb8sijqcw/tkfeather.png?rlkey=oou926fmsltkdh7u8s65jyzff&st=k6x5wbyu&raw=1"
+                  alt="an image of partial source code for my 'tkfeather' Python package"
+                )
+            .panel-block
+              p.is-family-primary tkfeather is a Python package that alows you to use Cole Bemis' <a href="https://feathericons.com/">Feather Icons</a> in Python's built-in GUI framework, tkinter. Run <span class="tag is-family-code has-text-weight-medium">pip install tkfeather</span> to try it out!
+            .panel-footer
+              .panel-block
+                span.tags.heading made with&nbsp;
+                  span.tag Python
+
+        .column.is-one-third
           .panel.is-light
             .panel-heading.is-family-secondary DELPHI
             .panel-block
@@ -104,7 +121,21 @@ html(lang="en")
                   span.tag Fusion
                   span.tag KiCAD
 
-        .column
+        .column.is-one-third
+          .panel.is-light
+            .panel-heading.is-family-secondary Lospec Palette Importer
+            .panel-block
+              a(href="https://sudo-whoami.itch.io/lospec-palette-importer" target="_blank")
+                img(src="https://www.dropbox.com/scl/fi/tx28cl54z0wk6ag1xl6d3/lospec_palette_importer.png?rlkey=nl1rvchff2kuqowxx73slalmf&st=5mct47zy&raw=1" alt="a screenshot of my Aseprite extension 'Lospec Palette Importer'")
+            .panel-block
+              p.is-family-primary This Aseprite extension allows you to import and use color palettes from Lospec.com. It's available as a "pay what you want" tool on itch.io. If you find it useful, please consider donating to support further development!
+            .panel-footer
+              .panel-block
+                span.tags.heading made with&nbsp;
+                  span.tag Aseprite
+                  span.tag Lua
+
+        .column.is-one-third
           .panel.is-light
             .panel-heading.is-family-secondary Tonegrove
             .panel-block
@@ -122,28 +153,14 @@ html(lang="en")
                   span.tag Inkscape
                   span.tag KiCAD
 
-        .column
-          .panel.is-light
-            .panel-heading.is-family-secondary Lospec Palette Importer
-            .panel-block
-              a(href="https://sudo-whoami.itch.io/lospec-palette-importer" target="_blank")
-                img(src="https://www.dropbox.com/scl/fi/tx28cl54z0wk6ag1xl6d3/lospec_palette_importer.png?rlkey=nl1rvchff2kuqowxx73slalmf&st=5mct47zy&raw=1" alt="a screenshot of my Aseprite extension 'Lospec Palette Importer'")
-            .panel-block
-              p.is-family-primary This Aseprite extension allows you to import and use color palettes from Lospec.com. It's available as a "pay what you want" tool on itch.io. If you find it useful, please consider donating to support further development!
-            .panel-footer
-              .panel-block
-                span.tags.heading made with&nbsp;
-                  span.tag Aseprite
-                  span.tag Lua
-
-        .column
+        .column.is-one-third
           .panel.is-light
             .panel-heading.is-family-secondary IQS5XX
             .panel-block
               a(href="https://github.com/JRiggles/IQS5XX" target="_blank")
-                image(src="https://www.dropbox.com/scl/fi/7o8k5ed39c2z5sdsdhzkp/IQS5XX.py.png?rlkey=4i1lmhc12iv4y9iqn6o7f2mwx&st=4m2nquol&raw=1" alt="an image of partial source code")
+                image(src="https://www.dropbox.com/scl/fi/7o8k5ed39c2z5sdsdhzkp/IQS5XX.py.png?rlkey=4i1lmhc12iv4y9iqn6o7f2mwx&st=4m2nquol&raw=1" alt="an image of partial source code for my IQS5XX Python library")
             .panel-block.is-family-primary
-              p A CircuitPython library for the TPS43 and TPS65 trackpad modules from Azoteq.
+              p IQS5XX is a CircuitPython library for the TPS43 and TPS65 trackpad modules from Azoteq (the name comes from the family of interface chips used on those modules!).
             .panel-footer
               .panel-block
                 span.tags.heading made with&nbsp;
