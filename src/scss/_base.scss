@@ -9,6 +9,7 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   scroll-behavior: smooth;
+  font-size: 100%;
 
 }
 // body.dark {
@@ -18,15 +19,15 @@ body {
 
 section > * {
   @include desktop {
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
   }
 }
 
 header {
   @include desktop {
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
   }
   // @include mobile {
   //   margin-left: 2rem;
