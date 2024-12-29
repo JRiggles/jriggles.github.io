@@ -4,7 +4,7 @@ function koco(callback) {
 	const keyPhrase = [
 		"ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a", "Enter"
 	];
-	let index = 0;
+	var index = 0;
 
 	document.addEventListener("keyup", (event) => { // get the key that was pressed
 		event.key === keyPhrase[index] ? index++ : index = 0;
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function showTagLoader(tagElement) {
-  let loader = document.createElement("span");
+  var loader = document.createElement("span");
   tagElement.innerHTML = "working...&nbsp;";
   loader.classList.add("bulma-loader-mixin");
   tagElement.appendChild(loader);
@@ -70,7 +70,7 @@ function getSoReputation() {
     })
     .then((data) => {
       if (data.items.length > 0) {
-        let repValue = data.items[0].reputation;
+        var repValue = data.items[0].reputation;
         repTag.innerText = repValue.toLocaleString();
         repTag.classList.add("is-black");
       }
@@ -91,10 +91,10 @@ function getSoTags(nTags) {
         // hide placeholder
         phTag.style.display = "none";
         // load tags
-        let topTagNames = data.items.slice(0, nTags).map((tag) => tag.name);
-        let tagContainer = document.getElementById("topTags");
+        var topTagNames = data.items.slice(0, nTags).map((tag) => tag.name);
+        var tagContainer = document.getElementById("topTags");
         topTagNames.forEach((tag) => {
-          let tagLink = document.createElement("a");
+          var tagLink = document.createElement("a");
           tagLink.href = `${SOUSERURL}+[${tag}]`;
           tagLink.target = "_blank";
           tagLink.innerText = tag;

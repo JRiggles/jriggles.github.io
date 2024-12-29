@@ -12,7 +12,7 @@ html(data-theme="dark" lang="en")
         link(href="./scss/main.scss" rel="stylesheet" type="text/css")
         script(src="../node_modules/feather-icons/dist/feather.min.js" type="text/javascript" defer)
         script(src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js" type="text/javascript" defer)
-        script(src="./js/main.js" type="module" defer)
+        script(src="./js/main.js" type="text/javascript" defer)
         title John Riggles
     body
         a(href="https://github.com/JRiggles/jriggles.github.io" target="_blank" alt="link to site source code").repo-link
@@ -81,7 +81,7 @@ html(data-theme="dark" lang="en")
                     a.button(href="https://sudo-whoami.itch.io" target="_blank").itch
                         span.icon
                             <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-itch"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 7v1c0 1.087 1.078 2 2 2c1.107 0 2 -.91 2 -2c0 1.09 .893 2 2 2s2 -.91 2 -2c0 1.09 .893 2 2 2s2 -.91 2 -2c0 1.09 .893 2 2 2s2 -.91 2 -2c0 1.09 .893 2 2 2c.922 0 2 -.913 2 -2v-1c-.009 -.275 -.538 -.964 -1.588 -2.068a3 3 0 0 0 -2.174 -.932h-12.476a3 3 0 0 0 -2.174 .932c-1.05 1.104 -1.58 1.793 -1.588 2.068z" /><path d="M4 10c-.117 6.28 .154 9.765 .814 10.456c1.534 .367 4.355 .535 7.186 .536c2.83 -.001 5.652 -.169 7.186 -.536c.99 -1.037 .898 -9.559 .814 -10.456" /><path d="M10 16l2 -2l2 2" /><path d="M12 14v4" /></svg>
-                            //- img(src="icons/brand-itch.svg" alt="Itch.io icon" aria-hidden="true")
+                            //- img(src="./icons/brand-itch.svg" alt="Itch.io icon" aria-hidden="true")
                         span Itch.io
 
                     a.button(href="https://stackoverflow.com/users/8512262/jriggles" target="_blank").stackoverflow
@@ -105,8 +105,7 @@ html(data-theme="dark" lang="en")
                                         i(data-feather="github" aria-hidden="true")
                                 a.card-header-icon(href="https://sudo-whoami.itch.io/canvas-templates" target="_blank" aria-label="itch.io")
                                     span.icon
-                                        svg(width="24px", height="24px")
-                                            use(xlink:href="icons/brand-itch.svg#icon-tabler-brand-itch")
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-itch"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 7v1c0 1.087 1.078 2 2 2c1.107 0 2 -.91 2 -2c0 1.09 .893 2 2 2s2 -.91 2 -2c0 1.09 .893 2 2 2s2 -.91 2 -2c0 1.09 .893 2 2 2s2 -.91 2 -2c0 1.09 .893 2 2 2c.922 0 2 -.913 2 -2v-1c-.009 -.275 -.538 -.964 -1.588 -2.068a3 3 0 0 0 -2.174 -.932h-12.476a3 3 0 0 0 -2.174 .932c-1.05 1.104 -1.58 1.793 -1.588 2.068z" /><path d="M4 10c-.117 6.28 .154 9.765 .814 10.456c1.534 .367 4.355 .535 7.186 .536c2.83 -.001 5.652 -.169 7.186 -.536c.99 -1.037 .898 -9.559 .814 -10.456" /><path d="M10 16l2 -2l2 2" /><path d="M12 14v4" /></svg>
                             .card-image
                                 figure.image
                                     img(src="https://raw.githubusercontent.com/JRiggles/Canvas-Templates/main/screenshots/Canvas%20Templates.png" alt="a screenshot of my 'Canvas Templates' project")
@@ -126,8 +125,7 @@ html(data-theme="dark" lang="en")
                                         i(data-feather="github" aria-hidden="true")
                                 a.card-header-icon(href="https://sudo-whoami.itch.io/copy-color-channel" target="_blank" aria-label="itch.io")
                                     span.icon
-                                        svg(width="24px", height="24px")
-                                            use(xlink:href="icons/brand-itch.svg#icon-tabler-brand-itch")
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-itch"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 7v1c0 1.087 1.078 2 2 2c1.107 0 2 -.91 2 -2c0 1.09 .893 2 2 2s2 -.91 2 -2c0 1.09 .893 2 2 2s2 -.91 2 -2c0 1.09 .893 2 2 2s2 -.91 2 -2c0 1.09 .893 2 2 2c.922 0 2 -.913 2 -2v-1c-.009 -.275 -.538 -.964 -1.588 -2.068a3 3 0 0 0 -2.174 -.932h-12.476a3 3 0 0 0 -2.174 .932c-1.05 1.104 -1.58 1.793 -1.588 2.068z" /><path d="M4 10c-.117 6.28 .154 9.765 .814 10.456c1.534 .367 4.355 .535 7.186 .536c2.83 -.001 5.652 -.169 7.186 -.536c.99 -1.037 .898 -9.559 .814 -10.456" /><path d="M10 16l2 -2l2 2" /><path d="M12 14v4" /></svg>
                             .card-image
                                 figure.image
                                     img(src="https://raw.githubusercontent.com/JRiggles/Copy-Color-Channel/main/screenshots/D20%20Multi%20-%20All%20Channels%20-%20Export.png" alt="a screenshot of my 'Copy Color Channel' Aseprite extension")
@@ -166,8 +164,7 @@ html(data-theme="dark" lang="en")
                                         i(data-feather="github" aria-hidden="true")
                                 a.card-header-icon(href="https://sudo-whoami.itch.io/easesprite" target="_blank" aria-label="itch.io")
                                     span.icon
-                                        svg(width="24px", height="24px")
-                                            use(xlink:href="icons/brand-itch.svg#icon-tabler-brand-itch")
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-itch"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 7v1c0 1.087 1.078 2 2 2c1.107 0 2 -.91 2 -2c0 1.09 .893 2 2 2s2 -.91 2 -2c0 1.09 .893 2 2 2s2 -.91 2 -2c0 1.09 .893 2 2 2s2 -.91 2 -2c0 1.09 .893 2 2 2c.922 0 2 -.913 2 -2v-1c-.009 -.275 -.538 -.964 -1.588 -2.068a3 3 0 0 0 -2.174 -.932h-12.476a3 3 0 0 0 -2.174 .932c-1.05 1.104 -1.58 1.793 -1.588 2.068z" /><path d="M4 10c-.117 6.28 .154 9.765 .814 10.456c1.534 .367 4.355 .535 7.186 .536c2.83 -.001 5.652 -.169 7.186 -.536c.99 -1.037 .898 -9.559 .814 -10.456" /><path d="M10 16l2 -2l2 2" /><path d="M12 14v4" /></svg>
                             .card-image
                                 figure.image
                                     img(src="https://raw.githubusercontent.com/JRiggles/EaseSprite/main/screenshots/easeInQuad.gif" alt="a demo gif of my 'EaseSprite' Aseprite extension")
@@ -188,8 +185,7 @@ html(data-theme="dark" lang="en")
                                         i(data-feather="github" aria-hidden="true")
                                 a.card-header-icon(href="https://sudo-whoami.itch.io/flatten-to-new-layer" target="_blank" aria-label="itch.io")
                                     span.icon
-                                        svg(width="24px", height="24px")
-                                            use(xlink:href="icons/brand-itch.svg#icon-tabler-brand-itch")
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-itch"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 7v1c0 1.087 1.078 2 2 2c1.107 0 2 -.91 2 -2c0 1.09 .893 2 2 2s2 -.91 2 -2c0 1.09 .893 2 2 2s2 -.91 2 -2c0 1.09 .893 2 2 2s2 -.91 2 -2c0 1.09 .893 2 2 2c.922 0 2 -.913 2 -2v-1c-.009 -.275 -.538 -.964 -1.588 -2.068a3 3 0 0 0 -2.174 -.932h-12.476a3 3 0 0 0 -2.174 .932c-1.05 1.104 -1.58 1.793 -1.588 2.068z" /><path d="M4 10c-.117 6.28 .154 9.765 .814 10.456c1.534 .367 4.355 .535 7.186 .536c2.83 -.001 5.652 -.169 7.186 -.536c.99 -1.037 .898 -9.559 .814 -10.456" /><path d="M10 16l2 -2l2 2" /><path d="M12 14v4" /></svg>
                             .card-image
                                 figure.image
                                     img(src="https://raw.githubusercontent.com/JRiggles/Flatten-to-New-Layer/main/screenshots/FNL%20Cover%20Image.png" alt="a screenshot of my 'Flatten to New Layer' Aseprite extension")
@@ -243,8 +239,7 @@ html(data-theme="dark" lang="en")
                                         i(data-feather="github" aria-hidden="true")
                                 a.card-header-icon(href="https://sudo-whoami.itch.io/lospec-palette-importer" target="_blank" aria-label="itch.io")
                                     span.icon
-                                        svg(width="24px", height="24px")
-                                            use(xlink:href="icons/brand-itch.svg#icon-tabler-brand-itch")
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-itch"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 7v1c0 1.087 1.078 2 2 2c1.107 0 2 -.91 2 -2c0 1.09 .893 2 2 2s2 -.91 2 -2c0 1.09 .893 2 2 2s2 -.91 2 -2c0 1.09 .893 2 2 2s2 -.91 2 -2c0 1.09 .893 2 2 2c.922 0 2 -.913 2 -2v-1c-.009 -.275 -.538 -.964 -1.588 -2.068a3 3 0 0 0 -2.174 -.932h-12.476a3 3 0 0 0 -2.174 .932c-1.05 1.104 -1.58 1.793 -1.588 2.068z" /><path d="M4 10c-.117 6.28 .154 9.765 .814 10.456c1.534 .367 4.355 .535 7.186 .536c2.83 -.001 5.652 -.169 7.186 -.536c.99 -1.037 .898 -9.559 .814 -10.456" /><path d="M10 16l2 -2l2 2" /><path d="M12 14v4" /></svg>
                             .card-image
                                 figure.image
                                     img(src="https://raw.githubusercontent.com/JRiggles/Lospec-Palette-Importer/main/screenshots/palette%20preview%20dialog.png" alt="a screenshot of my Aseprite extension 'Lospec Palette Importer'")
