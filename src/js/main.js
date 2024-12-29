@@ -36,7 +36,7 @@ showTagLoader(repTag);
 
 // run on page load
 document.addEventListener("DOMContentLoaded", () => {
-  feather.replace();
+  // feather.replace();
   // createIcons({icons,});  // load lucide icons
   getSoReputation();
   // getSoTags(2); // get top 2 stackoverflow tags

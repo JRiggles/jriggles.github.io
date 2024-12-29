@@ -8,16 +8,16 @@ html(data-theme="dark" lang="en")
         link(rel="preconnect" href="https://fonts.googleapis.com" crossorigin)
         link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
         link(href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" type="text/css")
-        //- link(href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet" type="text/css")
+        link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css")
+        //- script(src="../node_modules/feather-icons/dist/feather.min.js" type="text/javascript" defer)
         link(href="./scss/main.scss" rel="stylesheet" type="text/css")
-        script(src="../node_modules/feather-icons/dist/feather.min.js" type="text/javascript" defer)
         script(src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js" type="text/javascript" defer)
         script(src="./js/main.js" type="text/javascript" defer)
         title John Riggles
     body
         a(href="https://github.com/JRiggles/jriggles.github.io" target="_blank" alt="link to site source code").repo-link
             span.icon
-                i(data-feather="github" aria-hidden="true")
+                i.ti.ti-brand-github
         section.section#left-column
             .container
                 .level#heading
@@ -29,16 +29,14 @@ html(data-theme="dark" lang="en")
                                 style="height: 128px; width: 128px"
                             ).is-rounded.gravatar
                     .level-item
-                        span.icon.is-medium(aria-hidden="true" data-feather="terminal").has-text-grey
+                        span.icon.is-size-2.has-text-grey.ti.ti-terminal
                         .is-size-3.is-family-monospace.has-text-grey-lighter &nbsp;John Riggles
-
                 .level#tagline
                     .level-item.has-text-centered
                         .is-grey.is-family-monospace Engineer, programmer, musician, geek.
-
-                .level
+                .level#heading-tags
                     .level-item
-                        .field.is-grouped
+                        .field.is-grouped.is-grouped-multiline
                             .control
                                 .tags.has-addons
                                     span.tag BS
@@ -57,7 +55,7 @@ html(data-theme="dark" lang="en")
                                     span.tag SO
                                     span.tag.is-black#reputationTag
 
-            .container.is-fluid#about
+            .container#about
                 .title.is-family-secondary.is-5 About me
                 p I'm a self-taught full-stack developer with a background in audio and electronics engineering. My work focuses on Python development for data acquisition, data visualization, and UI/UX design.
                 br
@@ -67,28 +65,22 @@ html(data-theme="dark" lang="en")
 
             .container#social
                 .buttons.is-centered.are-small
-                    a.button(href="https://mastodon.social/@sudo_whoami" target="_blank").mastodon
+                    a.button(href="https://mastodon.social/@sudo_whoami" target="_blank").btn-mastodon
                         span.icon
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-mastodon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18.648 15.254c-1.816 1.763 -6.648 1.626 -6.648 1.626a18.262 18.262 0 0 1 -3.288 -.256c1.127 1.985 4.12 2.81 8.982 2.475c-1.945 2.013 -13.598 5.257 -13.668 -7.636l-.026 -1.154c0 -3.036 .023 -4.115 1.352 -5.633c1.671 -1.91 6.648 -1.666 6.648 -1.666s4.977 -.243 6.648 1.667c1.329 1.518 1.352 2.597 1.352 5.633s-.456 4.074 -1.352 4.944z" /><path d="M12 11.204v-2.926c0 -1.258 -.895 -2.278 -2 -2.278s-2 1.02 -2 2.278v4.722m4 -4.722c0 -1.258 .895 -2.278 2 -2.278s2 1.02 2 2.278v4.722" /></svg>
-                            //- img(src="icons/brand-mastodon.svg" alt="Mastodon icon" aria-hidden="true")
-                        span Mastodon
-
-                    a.button(href="https://github.com/JRiggles" target="_blank").github
+                            i.ti.ti-brand-mastodon
+                        span.text Mastodon
+                    a.button(href="https://github.com/JRiggles" target="_blank").btn-github
                         span.icon
-                            i(data-feather="github" aria-hidden="true")
-                        span GitHub
-
-                    a.button(href="https://sudo-whoami.itch.io" target="_blank").itch
+                            i.ti.ti-brand-github
+                        span.text GitHub
+                    a.button(href="https://sudo-whoami.itch.io" target="_blank").btn-itch
                         span.icon
-                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-itch"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 7v1c0 1.087 1.078 2 2 2c1.107 0 2 -.91 2 -2c0 1.09 .893 2 2 2s2 -.91 2 -2c0 1.09 .893 2 2 2s2 -.91 2 -2c0 1.09 .893 2 2 2s2 -.91 2 -2c0 1.09 .893 2 2 2c.922 0 2 -.913 2 -2v-1c-.009 -.275 -.538 -.964 -1.588 -2.068a3 3 0 0 0 -2.174 -.932h-12.476a3 3 0 0 0 -2.174 .932c-1.05 1.104 -1.58 1.793 -1.588 2.068z" /><path d="M4 10c-.117 6.28 .154 9.765 .814 10.456c1.534 .367 4.355 .535 7.186 .536c2.83 -.001 5.652 -.169 7.186 -.536c.99 -1.037 .898 -9.559 .814 -10.456" /><path d="M10 16l2 -2l2 2" /><path d="M12 14v4" /></svg>
-                            //- img(src="./icons/brand-itch.svg" alt="Itch.io icon" aria-hidden="true")
-                        span Itch.io
-
-                    a.button(href="https://stackoverflow.com/users/8512262/jriggles" target="_blank").stackoverflow
-                        span.icon
-                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-stackoverflow"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 17v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-1" /><path d="M8 16h8" /><path d="M8.322 12.582l7.956 .836" /><path d="M8.787 9.168l7.826 1.664" /><path d="M10.096 5.764l7.608 2.472" /></svg>
-                            //- img(src="icons/brand-stackoverflow.svg" alt="Itch.io icon" aria-hidden="true")
-                        span Stack Overflow
+                            i.ti.ti-brand-itch
+                        span.text Itch.io
+                    a.button(href="https://stackoverflow.com/users/8512262/jriggles" target="_blank").btn-stackoverflow
+                        span.icon.is-medium
+                            i.ti.ti-brand-stackoverflow
+                        span.text Stack Overflow
 
         section.section#right-column
             .container.is-fluid#projects
@@ -102,10 +94,10 @@ html(data-theme="dark" lang="en")
                                 .card-header-title.is-family-secondary Canvas Templates
                                 a.card-header-icon(href="https://github.com/JRiggles/Canvas-Templates" target="_blank" aria-label="GitHub")
                                     span.icon
-                                        i(data-feather="github" aria-hidden="true")
+                                        i.ti.ti-brand-github
                                 a.card-header-icon(href="https://sudo-whoami.itch.io/canvas-templates" target="_blank" aria-label="itch.io")
                                     span.icon
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-itch"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 7v1c0 1.087 1.078 2 2 2c1.107 0 2 -.91 2 -2c0 1.09 .893 2 2 2s2 -.91 2 -2c0 1.09 .893 2 2 2s2 -.91 2 -2c0 1.09 .893 2 2 2s2 -.91 2 -2c0 1.09 .893 2 2 2c.922 0 2 -.913 2 -2v-1c-.009 -.275 -.538 -.964 -1.588 -2.068a3 3 0 0 0 -2.174 -.932h-12.476a3 3 0 0 0 -2.174 .932c-1.05 1.104 -1.58 1.793 -1.588 2.068z" /><path d="M4 10c-.117 6.28 .154 9.765 .814 10.456c1.534 .367 4.355 .535 7.186 .536c2.83 -.001 5.652 -.169 7.186 -.536c.99 -1.037 .898 -9.559 .814 -10.456" /><path d="M10 16l2 -2l2 2" /><path d="M12 14v4" /></svg>
+                                        i.ti.ti-brand-itch
                             .card-image
                                 figure.image
                                     img(src="https://raw.githubusercontent.com/JRiggles/Canvas-Templates/main/screenshots/Canvas%20Templates.png" alt="a screenshot of my 'Canvas Templates' project")
@@ -122,10 +114,10 @@ html(data-theme="dark" lang="en")
                                 .card-header-title.is-family-secondary Copy Color Channel
                                 a.card-header-icon(href="https://github.com/JRiggles/Copy-Color-Channel" target="_blank" aria-label="GitHub")
                                     span.icon
-                                        i(data-feather="github" aria-hidden="true")
+                                        i.ti.ti-brand-github
                                 a.card-header-icon(href="https://sudo-whoami.itch.io/copy-color-channel" target="_blank" aria-label="itch.io")
                                     span.icon
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-itch"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 7v1c0 1.087 1.078 2 2 2c1.107 0 2 -.91 2 -2c0 1.09 .893 2 2 2s2 -.91 2 -2c0 1.09 .893 2 2 2s2 -.91 2 -2c0 1.09 .893 2 2 2s2 -.91 2 -2c0 1.09 .893 2 2 2c.922 0 2 -.913 2 -2v-1c-.009 -.275 -.538 -.964 -1.588 -2.068a3 3 0 0 0 -2.174 -.932h-12.476a3 3 0 0 0 -2.174 .932c-1.05 1.104 -1.58 1.793 -1.588 2.068z" /><path d="M4 10c-.117 6.28 .154 9.765 .814 10.456c1.534 .367 4.355 .535 7.186 .536c2.83 -.001 5.652 -.169 7.186 -.536c.99 -1.037 .898 -9.559 .814 -10.456" /><path d="M10 16l2 -2l2 2" /><path d="M12 14v4" /></svg>
+                                        i.ti.ti-brand-itch
                             .card-image
                                 figure.image
                                     img(src="https://raw.githubusercontent.com/JRiggles/Copy-Color-Channel/main/screenshots/D20%20Multi%20-%20All%20Channels%20-%20Export.png" alt="a screenshot of my 'Copy Color Channel' Aseprite extension")
@@ -143,7 +135,7 @@ html(data-theme="dark" lang="en")
                                 .card-header-title.is-family-secondary DELPHI
                                 a.card-header-icon(href="https://github.com/JRiggles/DELPHI-kbd" target="_blank" aria-label="GitHub")
                                     span.icon
-                                        i(data-feather="github" aria-hidden="true")
+                                        i.ti.ti-brand-github
                             .card-image
                                 figure.image
                                     img(src="https://github.com/JRiggles/DELPHI-kbd/blob/main/images/IMG_3758.jpg?raw=true" alt="a photo of my custom keyboard called DELPHI")
@@ -161,10 +153,10 @@ html(data-theme="dark" lang="en")
                                 .card-header-title.is-family-secondary EaseSprite
                                 a.card-header-icon(href="https://github.com/JRiggles/EaseSprite" target="_blank" aria-label="GitHub")
                                     span.icon
-                                        i(data-feather="github" aria-hidden="true")
+                                        i.ti.ti-brand-github
                                 a.card-header-icon(href="https://sudo-whoami.itch.io/easesprite" target="_blank" aria-label="itch.io")
                                     span.icon
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-itch"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 7v1c0 1.087 1.078 2 2 2c1.107 0 2 -.91 2 -2c0 1.09 .893 2 2 2s2 -.91 2 -2c0 1.09 .893 2 2 2s2 -.91 2 -2c0 1.09 .893 2 2 2s2 -.91 2 -2c0 1.09 .893 2 2 2c.922 0 2 -.913 2 -2v-1c-.009 -.275 -.538 -.964 -1.588 -2.068a3 3 0 0 0 -2.174 -.932h-12.476a3 3 0 0 0 -2.174 .932c-1.05 1.104 -1.58 1.793 -1.588 2.068z" /><path d="M4 10c-.117 6.28 .154 9.765 .814 10.456c1.534 .367 4.355 .535 7.186 .536c2.83 -.001 5.652 -.169 7.186 -.536c.99 -1.037 .898 -9.559 .814 -10.456" /><path d="M10 16l2 -2l2 2" /><path d="M12 14v4" /></svg>
+                                        i.ti.ti-brand-itch
                             .card-image
                                 figure.image
                                     img(src="https://raw.githubusercontent.com/JRiggles/EaseSprite/main/screenshots/easeInQuad.gif" alt="a demo gif of my 'EaseSprite' Aseprite extension")
@@ -182,10 +174,10 @@ html(data-theme="dark" lang="en")
                                 .card-header-title.is-family-secondary Flatten to New Layer
                                 a.card-header-icon(href="https://github.com/JRiggles/Flatten-to-New-Layer" target="_blank" aria-label="GitHub")
                                     span.icon
-                                        i(data-feather="github" aria-hidden="true")
+                                        i.ti.ti-brand-github
                                 a.card-header-icon(href="https://sudo-whoami.itch.io/flatten-to-new-layer" target="_blank" aria-label="itch.io")
                                     span.icon
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-itch"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 7v1c0 1.087 1.078 2 2 2c1.107 0 2 -.91 2 -2c0 1.09 .893 2 2 2s2 -.91 2 -2c0 1.09 .893 2 2 2s2 -.91 2 -2c0 1.09 .893 2 2 2s2 -.91 2 -2c0 1.09 .893 2 2 2c.922 0 2 -.913 2 -2v-1c-.009 -.275 -.538 -.964 -1.588 -2.068a3 3 0 0 0 -2.174 -.932h-12.476a3 3 0 0 0 -2.174 .932c-1.05 1.104 -1.58 1.793 -1.588 2.068z" /><path d="M4 10c-.117 6.28 .154 9.765 .814 10.456c1.534 .367 4.355 .535 7.186 .536c2.83 -.001 5.652 -.169 7.186 -.536c.99 -1.037 .898 -9.559 .814 -10.456" /><path d="M10 16l2 -2l2 2" /><path d="M12 14v4" /></svg>
+                                        i.ti.ti-brand-itch
                             .card-image
                                 figure.image
                                     img(src="https://raw.githubusercontent.com/JRiggles/Flatten-to-New-Layer/main/screenshots/FNL%20Cover%20Image.png" alt="a screenshot of my 'Flatten to New Layer' Aseprite extension")
@@ -202,7 +194,7 @@ html(data-theme="dark" lang="en")
                                 .card-header-title.is-family-secondary Git-Real
                                 a.card-header-icon(href="https://github.com/JRiggles/Git-Real" target="_blank" aria-label="GitHub")
                                     span.icon
-                                        i(data-feather="github" aria-hidden="true")
+                                        i.ti.ti-brand-github
                             .card-image
                                 figure.image
                                     img(src="https://raw.githubusercontent.com/JRiggles/Git-Real/main/images/demo.gif" alt="a demo gif of my 'Git-Real' project")
@@ -219,7 +211,7 @@ html(data-theme="dark" lang="en")
                                 .card-header-title.is-family-secondary IQS5XX
                                 a.card-header-icon(href="https://github.com/JRiggles/IQS5XX" target="_blank" aria-label="GitHub")
                                     span.icon
-                                        i(data-feather="github" aria-hidden="true")
+                                        i.ti.ti-brand-github
                             .card-image
                                 figure.image
                                     img(src="https://www.dropbox.com/scl/fi/7o8k5ed39c2z5sdsdhzkp/IQS5XX.py.png?rlkey=4i1lmhc12iv4y9iqn6o7f2mwx&st=4m2nquol&raw=1" alt="an image of partial source code for my IQS5XX Python library")
@@ -236,10 +228,10 @@ html(data-theme="dark" lang="en")
                                 .card-header-title.is-family-secondary Lospec Palette Importer
                                 a.card-header-icon(href="https://github.com/JRiggles/Lospec-Palette-Importer" target="_blank" aria-label="GitHub")
                                     span.icon
-                                        i(data-feather="github" aria-hidden="true")
+                                        i.ti.ti-brand-github
                                 a.card-header-icon(href="https://sudo-whoami.itch.io/lospec-palette-importer" target="_blank" aria-label="itch.io")
                                     span.icon
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-itch"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 7v1c0 1.087 1.078 2 2 2c1.107 0 2 -.91 2 -2c0 1.09 .893 2 2 2s2 -.91 2 -2c0 1.09 .893 2 2 2s2 -.91 2 -2c0 1.09 .893 2 2 2s2 -.91 2 -2c0 1.09 .893 2 2 2c.922 0 2 -.913 2 -2v-1c-.009 -.275 -.538 -.964 -1.588 -2.068a3 3 0 0 0 -2.174 -.932h-12.476a3 3 0 0 0 -2.174 .932c-1.05 1.104 -1.58 1.793 -1.588 2.068z" /><path d="M4 10c-.117 6.28 .154 9.765 .814 10.456c1.534 .367 4.355 .535 7.186 .536c2.83 -.001 5.652 -.169 7.186 -.536c.99 -1.037 .898 -9.559 .814 -10.456" /><path d="M10 16l2 -2l2 2" /><path d="M12 14v4" /></svg>
+                                        i.ti.ti-brand-itch
                             .card-image
                                 figure.image
                                     img(src="https://raw.githubusercontent.com/JRiggles/Lospec-Palette-Importer/main/screenshots/palette%20preview%20dialog.png" alt="a screenshot of my Aseprite extension 'Lospec Palette Importer'")
@@ -257,7 +249,7 @@ html(data-theme="dark" lang="en")
                                 .card-header-title.is-family-secondary LTOTD
                                 a.card-header-icon(href="https://github.com/JRiggles/LTOTD" target="_blank" aria-label="GitHub")
                                     span.icon
-                                        i(data-feather="github" aria-hidden="true")
+                                        i.ti.ti-brand-github
                             .card-image
                                 figure.image
                                     img(src="https://raw.githubusercontent.com/JRiggles/LTOTD/main/src/appicon.png" alt="an image of the LTOTD app icon")
@@ -274,7 +266,7 @@ html(data-theme="dark" lang="en")
                                 .card-header-title.is-family-secondary Sluggify Lua
                                 a.card-header-icon(href="https://github.com/JRiggles/sluggify-lua" target="_blank" aria-label="GitHub")
                                     span.icon
-                                        i(data-feather="github" aria-hidden="true")
+                                        i.ti.ti-brand-github
                             .card-content
                                 .content
                                     p Sluggify Lua is a Lua port of <a href="https://github.com/skeddles/sluggify" target="_blank">skeddles/sluggify</a> that converts strings into URL-friendly slugs. I originally wrote it as a part of Lospec Palette Importer, but I thought it might be useful on its own. You can use it to create clean and readable URLs from arbitrary text.
@@ -288,7 +280,7 @@ html(data-theme="dark" lang="en")
                                 .card-header-title.is-family-secondary Tonegrove
                                 a.card-header-icon(href="https://reverb.com/shop/tonegrove" target="_blank" aria-label="Reverb")
                                     span.icon
-                                        i(data-feather="external-link" aria-hidden="true")
+                                        i.ti.ti-external-link
                             .card-image
                                 figure.image
                                     img(src="https://rvb-img.reverb.com/image/upload/s--sPd9KSfV--/a_0,c_crop,h_0.676,w_1.000,x_0.000,y_0.200/f_auto,t_large/v1700329659/tbioapjgyfmvpq3tr8bp.jpg" alt="a photo of a guitar booster pedal I call 'Seedling'")
@@ -306,7 +298,7 @@ html(data-theme="dark" lang="en")
                                 .card-header-title.is-family-secondary tkfeather
                                 a.card-header-icon(href="https://github.com/JRiggles/tkfeather" target="_blank" aria-label="GitHub")
                                     span.icon
-                                        i(data-feather="github" aria-hidden="true")
+                                        i.ti.ti-brand-github
                             .card-image
                                 figure.image
                                     img(src="https://www.dropbox.com/scl/fi/n170vuui29uhwb8sijqcw/tkfeather.png?rlkey=oou926fmsltkdh7u8s65jyzff&st=k6x5wbyu&raw=1" alt="an image of partial source code for my 'tkfeather' Python package")
@@ -327,7 +319,7 @@ html(data-theme="dark" lang="en")
                                 | &copy;2022-24&nbsp;
                                 strong John Riggles
                                 span.icon.is-pulled-right
-                                    i(data-feather="info" aria-hidden="true")
+                                    i.ti.ti-info-circle
                                 br
                                 br
                                 | Project source code is licensed
