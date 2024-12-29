@@ -1,9 +1,10 @@
 {
   "name": "jriggles.github.io",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "My personal website",
   "main": "src/js/index.js",
   "scripts": {
+    "rebuild-modules": "rm -rf node_modules && npm install",
     "copy static files": "mkdir ./dist/static && cp -R ./src/img/. ./dist/static",
     "dev": "npx parcel src/index.pug",
     "predeploy": "rm -rf .parcel-cache && rm -rf dist && npx parcel build src/index.pug --public-url 'https://jriggles.github.io/' && cp CNAME ./dist",
@@ -23,11 +24,13 @@
   "devDependencies": {
     "@parcel/transformer-pug": "^2.12.0",
     "@parcel/transformer-sass": "^2.12.0",
-    "gh-pages": "^4.0.0"
+    "gh-pages": "^6.2.0",
+    "process": "^0.11.10",
+    "svgo": "^3.3.2"
   },
   "dependencies": {
-    "bulma": "^0.9.4",
-    "feather-icons": "^4.29.1"
+    "bulma": "^1.0.0",
+    "feather-icons": "^4.29.2"
   },
   "targets": {
     "main": false
