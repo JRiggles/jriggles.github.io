@@ -1,193 +1,355 @@
 doctype html
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    link(rel="shortcut icon" type="image/gif" href="favicon.gif")
-    link(rel="preconnect" href="https://fonts.googleapis.com" crossorigin)
-    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
-    link(href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" type="text/css")
-    link(href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet" type="text/css")
-    link(href="./scss/main.scss" rel="stylesheet" type="text/css")
-    script(src="../node_modules/feather-icons/dist/feather.min.js" type="text/javascript" defer)
-    script(src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js" type="text/javascript" defer)
-    script(src="./js/main.js" type="text/javasrcipt" defer)
-    title John Riggles
+html(data-theme="dark" lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="shortcut icon" type="image/gif" href="icons/favicon.gif")
+        link(rel="preconnect" href="https://fonts.googleapis.com" crossorigin)
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" type="text/css")
+        //- link(href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet" type="text/css")
+        link(href="./scss/main.scss" rel="stylesheet" type="text/css")
+        script(src="../node_modules/feather-icons/dist/feather.min.js" type="text/javascript" defer)
+        script(src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js" type="text/javascript" defer)
+        script(src="./js/main.js" type="module" defer)
+        title John Riggles
+    body
+        a(href="https://github.com/JRiggles/jriggles.github.io" target="_blank" alt="link to site source code").repo-link
+            span.icon
+                i(data-feather="github" aria-hidden="true")
+        section.section#left-column
+            .container
+                .level#heading
+                    .level-item
+                        figure.image.is-128x128
+                            img(
+                                src="https://gravatar.com/avatar/dba82bba7f55a079f995ca6be54ff100783a01b8f8e9d300f28855500bfec45b?d=mp&r=g&s=512"
+                                alt="gravatar image"
+                                style="height: 128px; width: 128px"
+                            ).is-rounded.gravatar
+                    .level-item
+                        span.icon.is-medium(aria-hidden="true" data-feather="terminal").has-text-grey
+                        .is-size-3.is-family-monospace.has-text-grey-lighter &nbsp;John Riggles
 
-  body
-    .hero.is-black.is-small
-      .hero-body
-        .columns.is-mobile
-          .column.is-narrow
-            img(data-feather="terminal")
-          .column.has-text-left
-            p Engineer, programmer, musician, geek.
-          //- .column
-          //-   img(
-          //-     data-feather="moon" data-toggle="sun" role="button"
-          //-   ).is-pulled-right.is-clearfix.is-clickable#darkMode
+                .level#tagline
+                    .level-item.has-text-centered
+                        .is-grey.is-family-monospace Engineer, programmer, musician, geek.
 
-    header.level
-      .level-item.has-text-centered
-        div
-          figure.image.is-128x128
-            //- get image from Gravatar
-            img(
-              src="https://gravatar.com/avatar/dba82bba7f55a079f995ca6be54ff100783a01b8f8e9d300f28855500bfec45b?d=mp&r=g&s=512"
-              alt="gravatar image"
-              style="height: 128px; width: 128px"
-            ).is-rounded.gravatar
-          p.heading.has-text-centered John Riggles
-          p.heading.has-text-centered.has-text-grey BS AET | AS EET
-          p.tag he/him
+                .level
+                    .level-item
+                        .field.is-grouped
+                            .control
+                                .tags.has-addons
+                                    span.tag BS
+                                    span.tag.is-danger AET
+                            .control
+                                .tags.has-addons
+                                    span.tag AS
+                                    span.tag.is-primary EET
+                            .contol
+                                .tags.has-addons
+                                    span.tag PN
+                                    span.tag.is-link He/Him
+                            //- a(href="https://stackoverflow.com/users/8512262/jriggles" target="_blank")
+                            .control
+                                .tags.has-addons
+                                    span.tag SO
+                                    span.tag.is-black#reputationTag
 
-      .level-item.has-text-centered
-        div
-          p.heading follow me on mastodon
-          a(
-            href="https://mastodon.social/@sudo_whoami" target="_blank"
-          ).is-size-5 @sudo_whoami
+            .container.is-fluid#about
+                .title.is-family-secondary.is-5 About me
+                p I'm a self-taught full-stack developer with a background in audio and electronics engineering. My work focuses on Python development for data acquisition, data visualization, and UI/UX design.
+                br
+                p Outside of work, I enjoy playing guitar, repairing and creating, and working on hardware and software projects. Most of my projects are open-source, and you can learn more about them here.
+                br
+                p Technically, I'm passionate about mechanical keyboards, guitar tech, PCB design, MSLA 3D printing, web and game development, and graphic design. Beyond tech, I love Dungeons &amp; Dragons, astronomy and astrophysics, craft beer, pixel art, linguistics, cooking, science fiction, and video games.
 
-      //- stackoverflow reputation populated by main.js
-      .level-item.has-text-centered
-        div
-          p.heading stackoverflow
-          a(
-            href="https://stackoverflow.com/users/8512262/jriggles" target="_blank"
-          )
-            span.tag.is-medium#reputationTag
+            .container#social
+                .buttons.is-centered.are-small
+                    a.button(href="https://mastodon.social/@sudo_whoami" target="_blank").mastodon
+                        span.icon
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-mastodon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18.648 15.254c-1.816 1.763 -6.648 1.626 -6.648 1.626a18.262 18.262 0 0 1 -3.288 -.256c1.127 1.985 4.12 2.81 8.982 2.475c-1.945 2.013 -13.598 5.257 -13.668 -7.636l-.026 -1.154c0 -3.036 .023 -4.115 1.352 -5.633c1.671 -1.91 6.648 -1.666 6.648 -1.666s4.977 -.243 6.648 1.667c1.329 1.518 1.352 2.597 1.352 5.633s-.456 4.074 -1.352 4.944z" /><path d="M12 11.204v-2.926c0 -1.258 -.895 -2.278 -2 -2.278s-2 1.02 -2 2.278v4.722m4 -4.722c0 -1.258 .895 -2.278 2 -2.278s2 1.02 2 2.278v4.722" /></svg>
+                            //- img(src="icons/brand-mastodon.svg" alt="Mastodon icon" aria-hidden="true")
+                        span Mastodon
 
-      //- top stackoverflow tags populated by main.js
-      .level-item.has-text-centered
-        div
-          p.heading top tags
-          span.tags.are-medium#topTags
-            span.tag#placeholderTag
+                    a.button(href="https://github.com/JRiggles" target="_blank").github
+                        span.icon
+                            i(data-feather="github" aria-hidden="true")
+                        span GitHub
 
-      .level-item.has-text-centered
-        div
-          p.heading github contributions
-          a(href="https://github.com/JRiggles" target="_blank")
-            img(
-              src="https://ghchart.rshah.org/JRiggles"
-              alt="GitHub contributions for JRiggles"
-            ).contrib-graph
+                    a.button(href="https://sudo-whoami.itch.io" target="_blank").itch
+                        span.icon
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-itch"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 7v1c0 1.087 1.078 2 2 2c1.107 0 2 -.91 2 -2c0 1.09 .893 2 2 2s2 -.91 2 -2c0 1.09 .893 2 2 2s2 -.91 2 -2c0 1.09 .893 2 2 2s2 -.91 2 -2c0 1.09 .893 2 2 2c.922 0 2 -.913 2 -2v-1c-.009 -.275 -.538 -.964 -1.588 -2.068a3 3 0 0 0 -2.174 -.932h-12.476a3 3 0 0 0 -2.174 .932c-1.05 1.104 -1.58 1.793 -1.588 2.068z" /><path d="M4 10c-.117 6.28 .154 9.765 .814 10.456c1.534 .367 4.355 .535 7.186 .536c2.83 -.001 5.652 -.169 7.186 -.536c.99 -1.037 .898 -9.559 .814 -10.456" /><path d="M10 16l2 -2l2 2" /><path d="M12 14v4" /></svg>
+                            //- img(src="icons/brand-itch.svg" alt="Itch.io icon" aria-hidden="true")
+                        span Itch.io
 
-    section#main
-      .title.is-family-secondary.is-4 About me
-      p I'm a self-taught full-stack Pythonista with a background in audio and electronics engineering. I write code for a living, with a focus on data acquisition and UI/UX. In my off time I play the guitar, fix things, and make new things. You can learn more about some of my projects below - most of them are open source!
-      br
-      p My tecnical areas of interest include (in no particular order) mechanical keyboards, guitar tech, PCB design, MSLA (resin) 3D printing, web dev, game dev, graphic design, and more...
-      br
-      p My non-technical areas of interest include Dungeons &amp; Dragons, astronomy and astropyhsics, craft beer, pixel art, linguistics, video games, cooking, and science fiction just to name a few!
+                    a.button(href="https://stackoverflow.com/users/8512262/jriggles" target="_blank").stackoverflow
+                        span.icon
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-stackoverflow"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 17v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-1" /><path d="M8 16h8" /><path d="M8.322 12.582l7.956 .836" /><path d="M8.787 9.168l7.826 1.664" /><path d="M10.096 5.764l7.608 2.472" /></svg>
+                            //- img(src="icons/brand-stackoverflow.svg" alt="Itch.io icon" aria-hidden="true")
+                        span Stack Overflow
 
-    section#projects
-      .title.is-family-secondary.is-4 Projects
-      p Almost every project starts as an excuse to learn something new or practice something I've learned. Here's what I've been working on lately:
-      br
-      .columns.is-multiline
-        .column.is-one-third
-          .panel.is-light
-            .panel-heading.is-family-secondary tkfeather
-            .panel-block
-              a(href="https://github.com/JRiggles/tkfeather" target="_blank")
-                img(
-                  src="https://www.dropbox.com/scl/fi/n170vuui29uhwb8sijqcw/tkfeather.png?rlkey=oou926fmsltkdh7u8s65jyzff&st=k6x5wbyu&raw=1"
-                  alt="an image of partial source code for my 'tkfeather' Python package"
-                )
-            .panel-block
-              p.is-family-primary tkfeather is a Python package that alows you to use Cole Bemis' <a href="https://feathericons.com/">Feather Icons</a> in Python's built-in GUI framework, tkinter. Run <span class="tag is-family-code has-text-weight-medium">pip install tkfeather</span> to try it out!
-            .panel-footer
-              .panel-block
-                span.tags.heading made with&nbsp;
-                  span.tag Python
-
-        .column.is-one-third
-          .panel.is-light
-            .panel-heading.is-family-secondary DELPHI
-            .panel-block
-              a(href="https://github.com/JRiggles/DELPHI-kbd" target="_blank")
-                img(
-                  src="https://github.com/JRiggles/DELPHI-kbd/blob/main/images/IMG_3758.jpg?raw=true"
-                  alt="a photo of my custom keyboard called DELPHI"
-                )
-            .panel-block
-              p.is-family-primary A.K.A. "Dual Ergolinear Low-Profile Human Interface". DELPHI is a minimal split mechanical keyboard designed to combine ergonomics and an ortholinear layout into a small form factor.
-            .panel-footer
-              .panel-block
-                span.tags.heading made with&nbsp;
-                  span.tag CircuitPython
-                  span.tag Fusion
-                  span.tag KiCAD
-
-        .column.is-one-third
-          .panel.is-light
-            .panel-heading.is-family-secondary Lospec Palette Importer
-            .panel-block
-              a(href="https://sudo-whoami.itch.io/lospec-palette-importer" target="_blank")
-                img(src="https://www.dropbox.com/scl/fi/tx28cl54z0wk6ag1xl6d3/lospec_palette_importer.png?rlkey=nl1rvchff2kuqowxx73slalmf&st=5mct47zy&raw=1" alt="a screenshot of my Aseprite extension 'Lospec Palette Importer'")
-            .panel-block
-              p.is-family-primary This Aseprite extension allows you to import and use color palettes from Lospec.com. It's available as a "pay what you want" tool on itch.io. If you find it useful, please consider donating to support further development!
-            .panel-footer
-              .panel-block
-                span.tags.heading made with&nbsp;
-                  span.tag Aseprite
-                  span.tag Lua
-
-        .column.is-one-third
-          .panel.is-light
-            .panel-heading.is-family-secondary Tonegrove
-            .panel-block
-              a(href="https://reverb.com/shop/tonegrove" target="_blank")
-                img(
-                  src="https://rvb-img.reverb.com/image/upload/s--sPd9KSfV--/a_0,c_crop,h_0.676,w_1.000,x_0.000,y_0.200/f_auto,t_large/v1700329659/tbioapjgyfmvpq3tr8bp.jpg"
-                  alt="a photo of a guitar booster pedal I call 'Seedling'"
-                )
-            .panel-block
-              p.is-family-primary Tonegrove is my brand for guitar effects pedals designed and hand-built by me. My first design, an ultra-clean booster/buffer called "Seedling", is available now. If you're interested, please consider supporting my Reverb shop!
-            .panel-footer
-              .panel-block
-                span.tags.heading made with&nbsp;
-                  span.tag Fusion
-                  span.tag Inkscape
-                  span.tag KiCAD
-
-        .column.is-one-third
-          .panel.is-light
-            .panel-heading.is-family-secondary IQS5XX
-            .panel-block
-              a(href="https://github.com/JRiggles/IQS5XX" target="_blank")
-                image(src="https://www.dropbox.com/scl/fi/7o8k5ed39c2z5sdsdhzkp/IQS5XX.py.png?rlkey=4i1lmhc12iv4y9iqn6o7f2mwx&st=4m2nquol&raw=1" alt="an image of partial source code for my IQS5XX Python library")
-            .panel-block.is-family-primary
-              p IQS5XX is a CircuitPython library for the TPS43 and TPS65 trackpad modules from Azoteq (the name comes from the family of interface chips used on those modules!).
-            .panel-footer
-              .panel-block
-                span.tags.heading made with&nbsp;
-                  span.tag CircuitPython
-                  //- span.tag.is-dark WIP
-
-    p.content.heading.has-text-centered#PS If you'd like to know more about how I built this site, you can check out the source code on&nbsp;
-      a(href="https://github.com/JRiggles/jriggles.github.io" target="_blank") GitHub
-
-    footer.footer
-      .content.has-text-centered.is-size-7.is-dark
-        p
-        | &copy;2022-24&nbsp;
-        strong John Riggles
-        |
-        | | Project source code is licensed
-        |
-        a(
-          href="http://opensource.org/licenses/mit-license.php",
-          target="_blank"
-        ).has-text-weight-bold.is-underlined MIT
-        |
-        | unless otherwise marked. This website's content is licensed
-        |
-        a(
-          href="https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          target="_blank"
-        ).has-text-weight-bold.is-underlined CC BY NC SA 4.0
-        br
-        p - All trademarks are property of their respective owners -
+        section.section#right-column
+            .container.is-fluid#projects
+                .title.is-family-secondary.is-5 Projects
+                p.is-size-6 Almost every project starts as an excuse to learn something new or practice something I've learned. I've written a few extensions for the Aseprite pixel art editor, all of which are available on my itch.io page for free / "pay what you want". If you find them useful, please consider donating to support future development! I also work on hardware projects, including custom mechanical keyboards, guitar effects pedals, and more. I develop apps and CircuitPython libraries to solve specific problems and enhance my workflow.
+                br
+                .columns.is-desktop.is-multiline
+                    .column
+                        .card
+                            .card-header
+                                .card-header-title.is-family-secondary Canvas Templates
+                                a.card-header-icon(href="https://github.com/JRiggles/Canvas-Templates" target="_blank" aria-label="GitHub")
+                                    span.icon
+                                        i(data-feather="github" aria-hidden="true")
+                                a.card-header-icon(href="https://sudo-whoami.itch.io/canvas-templates" target="_blank" aria-label="itch.io")
+                                    span.icon
+                                        svg(width="24px", height="24px")
+                                            use(xlink:href="icons/brand-itch.svg#icon-tabler-brand-itch")
+                            .card-image
+                                figure.image
+                                    img(src="https://raw.githubusercontent.com/JRiggles/Canvas-Templates/main/screenshots/Canvas%20Templates.png" alt="a screenshot of my 'Canvas Templates' project")
+                            .card-content
+                                .content
+                                    p Canvas Templates is an Aseprite extension that provides a set of templates for common canvas sizes and layouts, including sizes for some famous retro game consoles. It's designed to help artists quickly set up their workspace and start creating without worrying about canvas dimensions.
+                            .card-footer
+                                .card-footer-item.is-justify-content-left
+                                    span.tag Aseprite
+                                    span.tag Lua
+                    .column
+                        .card
+                            .card-header
+                                .card-header-title.is-family-secondary Copy Color Channel
+                                a.card-header-icon(href="https://github.com/JRiggles/Copy-Color-Channel" target="_blank" aria-label="GitHub")
+                                    span.icon
+                                        i(data-feather="github" aria-hidden="true")
+                                a.card-header-icon(href="https://sudo-whoami.itch.io/copy-color-channel" target="_blank" aria-label="itch.io")
+                                    span.icon
+                                        svg(width="24px", height="24px")
+                                            use(xlink:href="icons/brand-itch.svg#icon-tabler-brand-itch")
+                            .card-image
+                                figure.image
+                                    img(src="https://raw.githubusercontent.com/JRiggles/Copy-Color-Channel/main/screenshots/D20%20Multi%20-%20All%20Channels%20-%20Export.png" alt="a screenshot of my 'Copy Color Channel' Aseprite extension")
+                            .card-content
+                                .content
+                                    p This Aseprite extension allows you to copy individual color channels to separate layers. It's useful for advanced image editing and manipulation.
+                            .card-footer
+                                .card-footer-item.is-justify-content-left
+                                    span.tag Aseprite
+                                    span.tag Lua
+                .columns.is-desktop.is-multiline
+                    .column
+                        .card
+                            .card-header
+                                .card-header-title.is-family-secondary DELPHI
+                                a.card-header-icon(href="https://github.com/JRiggles/DELPHI-kbd" target="_blank" aria-label="GitHub")
+                                    span.icon
+                                        i(data-feather="github" aria-hidden="true")
+                            .card-image
+                                figure.image
+                                    img(src="https://github.com/JRiggles/DELPHI-kbd/blob/main/images/IMG_3758.jpg?raw=true" alt="a photo of my custom keyboard called DELPHI")
+                            .card-content
+                                .content
+                                    p A.K.A. "Dual Ergolinear Low-Profile Human Interface". DELPHI is a minimal split mechanical keyboard designed to combine ergonomics and an ortholinear layout into a small form factor.
+                            .card-footer
+                                .card-footer-item.is-justify-content-left
+                                    span.tag CircuitPython
+                                    span.tag Fusion
+                                    span.tag KiCAD
+                    .column
+                        .card
+                            .card-header
+                                .card-header-title.is-family-secondary EaseSprite
+                                a.card-header-icon(href="https://github.com/JRiggles/EaseSprite" target="_blank" aria-label="GitHub")
+                                    span.icon
+                                        i(data-feather="github" aria-hidden="true")
+                                a.card-header-icon(href="https://sudo-whoami.itch.io/easesprite" target="_blank" aria-label="itch.io")
+                                    span.icon
+                                        svg(width="24px", height="24px")
+                                            use(xlink:href="icons/brand-itch.svg#icon-tabler-brand-itch")
+                            .card-image
+                                figure.image
+                                    img(src="https://raw.githubusercontent.com/JRiggles/EaseSprite/main/screenshots/easeInQuad.gif" alt="a demo gif of my 'EaseSprite' Aseprite extension")
+                            .card-content
+                                .content
+                                    p EaseSprite is an Aseprite extension that provides easing functions for smooth animations. It helps you create more natural and visually appealing animations in your sprite work.
+                            .card-footer
+                                .card-footer-item.is-justify-content-left
+                                    span.tag Aseprite
+                                    span.tag Lua
+                .columns.is-desktop.is-multiline
+                    .column
+                        .card
+                            .card-header
+                                .card-header-title.is-family-secondary Flatten to New Layer
+                                a.card-header-icon(href="https://github.com/JRiggles/Flatten-to-New-Layer" target="_blank" aria-label="GitHub")
+                                    span.icon
+                                        i(data-feather="github" aria-hidden="true")
+                                a.card-header-icon(href="https://sudo-whoami.itch.io/flatten-to-new-layer" target="_blank" aria-label="itch.io")
+                                    span.icon
+                                        svg(width="24px", height="24px")
+                                            use(xlink:href="icons/brand-itch.svg#icon-tabler-brand-itch")
+                            .card-image
+                                figure.image
+                                    img(src="https://raw.githubusercontent.com/JRiggles/Flatten-to-New-Layer/main/screenshots/FNL%20Cover%20Image.png" alt="a screenshot of my 'Flatten to New Layer' Aseprite extension")
+                            .card-content
+                                .content
+                                    p This Aseprite extension allows you to flatten all visible layers into a new layer, preserving the original layers. It's useful for non-destructive editing workflows.
+                            .card-footer
+                                .card-footer-item.is-justify-content-left
+                                    span.tag Aseprite
+                                    span.tag Lua
+                    .column
+                        .card
+                            .card-header
+                                .card-header-title.is-family-secondary Git-Real
+                                a.card-header-icon(href="https://github.com/JRiggles/Git-Real" target="_blank" aria-label="GitHub")
+                                    span.icon
+                                        i(data-feather="github" aria-hidden="true")
+                            .card-image
+                                figure.image
+                                    img(src="https://raw.githubusercontent.com/JRiggles/Git-Real/main/images/demo.gif" alt="a demo gif of my 'Git-Real' project")
+                            .card-content
+                                .content
+                                    p Git-Real is a CircuitPython project that uses an Adafruit ESP32 Feather and an LED matrix display wing to provide a real-life display of your GitHub commit history. It's a fun way to visualize coding progress and stay motivated!
+                            .card-footer
+                                .card-footer-item.is-justify-content-left
+                                    span.tag CircuitPython
+                .columns.is-desktop.is-multiline
+                    .column
+                        .card
+                            .card-header
+                                .card-header-title.is-family-secondary IQS5XX
+                                a.card-header-icon(href="https://github.com/JRiggles/IQS5XX" target="_blank" aria-label="GitHub")
+                                    span.icon
+                                        i(data-feather="github" aria-hidden="true")
+                            .card-image
+                                figure.image
+                                    img(src="https://www.dropbox.com/scl/fi/7o8k5ed39c2z5sdsdhzkp/IQS5XX.py.png?rlkey=4i1lmhc12iv4y9iqn6o7f2mwx&st=4m2nquol&raw=1" alt="an image of partial source code for my IQS5XX Python library")
+                            .card-content
+                                .content
+                                    p IQS5XX is a CircuitPython library for the TPS43 and TPS65 trackpad modules from Azoteq (the name comes from the family of interface chips used on those modules).
+                            .card-footer
+                                .card-footer-item.is-justify-content-left
+                                    span.tag CircuitPython
+                                    //- span.tag.is-dark WIP
+                    .column
+                        .card
+                            .card-header
+                                .card-header-title.is-family-secondary Lospec Palette Importer
+                                a.card-header-icon(href="https://github.com/JRiggles/Lospec-Palette-Importer" target="_blank" aria-label="GitHub")
+                                    span.icon
+                                        i(data-feather="github" aria-hidden="true")
+                                a.card-header-icon(href="https://sudo-whoami.itch.io/lospec-palette-importer" target="_blank" aria-label="itch.io")
+                                    span.icon
+                                        svg(width="24px", height="24px")
+                                            use(xlink:href="icons/brand-itch.svg#icon-tabler-brand-itch")
+                            .card-image
+                                figure.image
+                                    img(src="https://raw.githubusercontent.com/JRiggles/Lospec-Palette-Importer/main/screenshots/palette%20preview%20dialog.png" alt="a screenshot of my Aseprite extension 'Lospec Palette Importer'")
+                            .card-content
+                                .content
+                                    p This Aseprite extension allows you to import and use color palettes from <a href="https://lospec.com" alt="link to Lospec.com">Lospec.com</a>.
+                            .card-footer
+                                .card-footer-item.is-justify-content-left
+                                    span.tag Aseprite
+                                    span.tag Lua
+                .columns.is-desktop.is-multiline
+                    .column
+                        .card
+                            .card-header
+                                .card-header-title.is-family-secondary LTOTD
+                                a.card-header-icon(href="https://github.com/JRiggles/LTOTD" target="_blank" aria-label="GitHub")
+                                    span.icon
+                                        i(data-feather="github" aria-hidden="true")
+                            .card-image
+                                figure.image
+                                    img(src="https://raw.githubusercontent.com/JRiggles/LTOTD/main/src/appicon.png" alt="an image of the LTOTD app icon")
+                            .card-content
+                                .content
+                                    p LTOTD (Lospec Tag of the Day) is a MacOS menu bar app that displays the current Lospec Tag of the Day. It's written in Python using the rumps library.
+                            .card-footer
+                                .card-footer-item.is-justify-content-left
+                                    span.tag Python
+                                    span.tag.is-black WIP
+                    .column
+                        .card
+                            .card-header
+                                .card-header-title.is-family-secondary Sluggify Lua
+                                a.card-header-icon(href="https://github.com/JRiggles/sluggify-lua" target="_blank" aria-label="GitHub")
+                                    span.icon
+                                        i(data-feather="github" aria-hidden="true")
+                            .card-content
+                                .content
+                                    p Sluggify Lua is a Lua port of <a href="https://github.com/skeddles/sluggify" target="_blank">skeddles/sluggify</a> that converts strings into URL-friendly slugs. I originally wrote it as a part of Lospec Palette Importer, but I thought it might be useful on its own. You can use it to create clean and readable URLs from arbitrary text.
+                            .card-footer
+                                .card-footer-item.is-justify-content-left
+                                    span.tag Lua
+                .columns.is-desktop.is-multiline
+                    .column
+                        .card
+                            .card-header
+                                .card-header-title.is-family-secondary Tonegrove
+                                a.card-header-icon(href="https://reverb.com/shop/tonegrove" target="_blank" aria-label="Reverb")
+                                    span.icon
+                                        i(data-feather="external-link" aria-hidden="true")
+                            .card-image
+                                figure.image
+                                    img(src="https://rvb-img.reverb.com/image/upload/s--sPd9KSfV--/a_0,c_crop,h_0.676,w_1.000,x_0.000,y_0.200/f_auto,t_large/v1700329659/tbioapjgyfmvpq3tr8bp.jpg" alt="a photo of a guitar booster pedal I call 'Seedling'")
+                            .card-content
+                                .content
+                                    p Tonegrove is my brand for guitar effects pedals designed and hand-built by me. My first design, an ultra-clean booster/buffer called "Seedling", is available now. If you're interested, please consider supporting my Reverb shop!
+                            .card-footer
+                                .card-footer-item.is-justify-content-left
+                                    span.tag Fusion
+                                    span.tag Inkscape
+                                    span.tag KiCAD
+                    .column
+                        .card
+                            .card-header
+                                .card-header-title.is-family-secondary tkfeather
+                                a.card-header-icon(href="https://github.com/JRiggles/tkfeather" target="_blank" aria-label="GitHub")
+                                    span.icon
+                                        i(data-feather="github" aria-hidden="true")
+                            .card-image
+                                figure.image
+                                    img(src="https://www.dropbox.com/scl/fi/n170vuui29uhwb8sijqcw/tkfeather.png?rlkey=oou926fmsltkdh7u8s65jyzff&st=k6x5wbyu&raw=1" alt="an image of partial source code for my 'tkfeather' Python package")
+                            .card-content
+                                .content
+                                    p tkfeather is a Python package that allows you to use Cole Bemis' <a href="https://feathericons.com/" alt="link to Feather Icons">Feather Icons</a> in Python's built-in GUI framework, tkinter. Run <span class="has-text-warning is-family-monospace has-text-weight-medium">pip install tkfeather</span> to try it out!
+                            .card-footer
+                                .card-footer-item.is-justify-content-left
+                                    span.tag Python
+                .columns.is-desktop.is-multiline
+                    .column
+                        p.content.is-size-7.has-text-grey.has-text-centered#PS If you'd like to know more about how I built this site, you can check out the source code on GitHub
+                .columns.is-desktop.is-multiline
+                    .column
+                        article.message.is-small.is-primary
+                            .message-body
+                                p
+                                | &copy;2022-24&nbsp;
+                                strong John Riggles
+                                span.icon.is-pulled-right
+                                    i(data-feather="info" aria-hidden="true")
+                                br
+                                br
+                                | Project source code is licensed
+                                |
+                                a(
+                                    href="https://mit-license.org",
+                                    target="_blank"
+                                    alt="link to MIT license"
+                                ).has-text-weight-bold.is-underlined MIT
+                                |
+                                | unless otherwise marked. This website's content is licensed
+                                |
+                                a(
+                                    href="https://creativecommons.org/licenses/by-nc-sa/4.0/",
+                                    target="_blank"
+                                    alt="link to CC BY NC SA 4.0 license"
+                                ).has-text-weight-bold.is-underlined CC BY NC SA 4.0
+                                br
+                                br
+                                p I am not affiliated with Aseprite, Feather Icons, GitHub, Lospec, etc. All trademarks are property of their respective owners

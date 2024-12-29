@@ -1,3 +1,5 @@
+// import { createIcons, icons } from 'lucide';
+
 function koco(callback) {
 	const keyPhrase = [
 		"ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a", "Enter"
@@ -30,19 +32,21 @@ var STACKEXAPIKEY = ")q0PGY5frwc43NqR*gt6hQ(("; // public key
 var repTag = document.getElementById("reputationTag");
 var phTag = document.getElementById("placeholderTag");
 showTagLoader(repTag);
-showTagLoader(phTag);
+// showTagLoader(phTag);
+
 // run on page load
 document.addEventListener("DOMContentLoaded", () => {
   feather.replace();
+  // createIcons({icons,});  // load lucide icons
   getSoReputation();
-  getSoTags(2); // get top 2 stackoverflow tags
+  // getSoTags(2); // get top 2 stackoverflow tags
   koco(launch);  // set up super secret suprise
 });
 
 function showTagLoader(tagElement) {
   let loader = document.createElement("span");
   tagElement.innerHTML = "working...&nbsp;";
-  loader.classList.add("has-loader");
+  loader.classList.add("bulma-loader-mixin");
   tagElement.appendChild(loader);
 }
 
@@ -68,7 +72,7 @@ function getSoReputation() {
       if (data.items.length > 0) {
         let repValue = data.items[0].reputation;
         repTag.innerText = repValue.toLocaleString();
-        repTag.classList.add("is-dark");
+        repTag.classList.add("is-black");
       }
     })
     .catch((error) => {

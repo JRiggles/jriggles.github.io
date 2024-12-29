@@ -1,1 +1,9 @@
-@import "bulma/bulma.sass";
+// FIXME: overriding Bulma variables isn't working
+// @use "bulma/sass" with (
+//   $family-monospace: '"JetBrains Mono", "Menlo", monospace',
+//   $family-code: '"JetBrains Mono", "Menlo", monospace',
+// );
+// @use "bulma/sass/utilities" with (
+//   $family-monospace: '"JetBrains Mono", "Menlo", monospace',
+// );
+@use "bulma/sass";

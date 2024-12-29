@@ -1,115 +1,171 @@
+@use "bulma/sass/utilities/mixins";
+@use "bulma/sass/utilities/initial-variables" as iv;
+
+// FIXME: overriding Bulma variables isn't working
+$family-monospace: "JetBrains Mono", "Menlo", monospace;
+
+.bulma-loader-mixin {
+  @include mixins.loader;
+}
+
 html,
 body {
-  // display: flex;
-  // flex-direction: column;
-  font-family: "JetBrains Mono", "Menlo", monospace;
-  font-weight: 500;
+  // font-weight: 500;
   height: 100%;
   min-height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
   scroll-behavior: smooth;
   font-size: 100%;
-
+  letter-spacing: 0.03rem;
 }
-// body.dark {
-//   background-color: $dark;
-//   color: $light;
-// }
 
-section > * {
-  @include desktop {
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
+.repo-link {
+  position: fixed;
+  background: iv.$black-ter;
+  background: linear-gradient(45deg, iv.$black-bis 45%, iv.$black-ter 55%);
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+  right: 0;
+  top: 0;
+  width: 4rem;
+  height: 4rem;
+  z-index: 1024;
+  .icon {
+    color: iv.$grey;
+    transform: rotate(45deg) translate(1.66rem, -0.9rem);
+    &:hover {
+      color: iv.$white;
+    }
   }
 }
 
-header {
-  @include desktop {
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
-  }
-  // @include mobile {
-  //   margin-left: 2rem;
-  //   margin-right: 2rem;
-  // }
+#left-column, #right-column {
+  padding: 1rem;
 }
 
-abbr {
-  cursor: help;
-  font-weight: 600;
-}
-
-section > p {
-  text-indent: 2ch;
-}
-
-.contrib-graph {
-  @include tablet {
-    padding-right: 1.5rem;
-  }
-  @include mobile {
-    padding-left: 1rem;
-    padding-right: 1rem;
+#left-column {
+  background-color: iv.$black-ter;
+  background: linear-gradient(69deg, iv.$black-ter, iv.$black);
+  position: fixed;
+  left: 0;
+  width: 38.2vw; // Approximately 1 / (1 + φ) of the viewport width
+  height: 100vh;
+  @include mixins.touch {  // mobile and tablet
+    position: relative;
+    width: 100%;
+    height: auto;
   }
 }
 
-.has-loader {
-  @include loader;
+#right-column {
+  background-color: iv.$black-bis;
+  position: absolute;
+  right: 0;
+  width: 61.8vw; // Approximately φ / (1 + φ) of the viewport width
+  // height: auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  @include mixins.touch {  // mobile and tablet
+    position: relative;
+    width: 100%;
+    margin-top: 0;
+  }
 }
 
-.hero {
-  margin-bottom: 2rem;
+#heading {
+  z-index: 1024;
+  margin-bottom: -2rem;
+  @include mixins.touch {
+    // position: sticky;
+    top: 2rem;
+    .gravatar {
+      transform: scale(0.9);
+    }
+  }
+}
+
+#about {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  width: calc(100% - 2rem);
+}
+
+#social {
+  padding-bottom: 1rem;
+  @include mixins.touch {
+    padding-bottom: 2rem;
+  }
+}
+
+section > p, .container > p {  // indent paragraphs
+  text-indent: 1.25rem;
+}
+
+.level, .level-left, .level-right {
+  margin: 3rem 2rem -2rem 2rem;
+  padding: 0;
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+.button {
+  transition: all 0.2s iv.$easing;
+}
+
+.mastodon:hover {
+  background: #6364f6;
+}
+
+.github:hover {
+  background: #1B2028;
+}
+
+.itch:hover {
+  background: #FA5C5C;
+}
+
+.stackoverflow:hover {
+  background: #F48024;
+}
+
+.icon-tabler {
+  stroke-width: 1.65;
 }
 
 .gravatar {
   padding: 1rem;
   transform: scale(1);
-  transition: all 0.2s $easing;
+  transition: all 0.2s iv.$easing;
   &:hover {
     transform: scale(1.1);
-    transition: all 0.2s $easing;
+    transition: all 0.2s iv.$easing;
   }
 }
 
-#main,
-#projects,
-#PS {
-  margin: 2rem;
+.title.is-5 {  // section titles
+  margin-bottom: 1rem;
 }
 
-#topTags a {
-  text-decoration: none;
+.tag {
+  font-family: $family-monospace;  // "JetBrains Mono", "Menlo", monospace;
 }
 
-.panel {
-  @include desktop {
-    margin-top: 0.5rem;
-  }
-  .panel-heading {
-    background-color: $light;
-    color: $black;
-    transition: all 0.2s $easing;
-  }
-  &:hover > .panel-heading {
-    background-color: $primary;
-    color: $light;
-    transition: all 0.2s $easing;
-  }
-  img {
-    padding-top: 0.1rem;
-    padding-bottom: 0.1rem;
-    border-radius: $radius-large;
-  }
+.card {
+  --bulma-card-shadow: none;  // remove hideous default shadow
+  border: 1px solid iv.$grey-darker;
 }
 
-.footer {
-  a {
-    color: $black;
-    transition: color 0.1s $easing;
-    &:hover {
-      color: $link;
-      transition: color 0.1s $easing;
-    }
+.card .tag {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+
+.card-header-icon .icon {
+  transition: color 0.2s iv.$easing;
+  &:hover {
+    color: iv.$white;
   }
 }

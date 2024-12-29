@@ -1,2 +1,5 @@
-@import "_vendors.scss";
-@import "_base.scss";
+// NOTE: @import is deprecated in favor of @use
+// @import "_vendors.scss";
+// @import "_base.scss";
+@use '_vendors';
+@use '_base';
