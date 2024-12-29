@@ -29,8 +29,7 @@
     "svgo": "^3.3.2"
   },
   "dependencies": {
-    "bulma": "^1.0.0",
-    "feather-icons": "^4.29.2"
+    "bulma": "^1.0.0"
   },
   "targets": {
     "main": false
