@@ -1,5 +1,3 @@
-// import { createIcons, icons } from 'lucide';
-
 function koco(callback) {
 	const keyPhrase = [
 		"ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a", "Enter"
@@ -22,7 +20,7 @@ function launch() {
     spread: 128,
     origin: { y: 0.5 },
     shapes: ["circle", "square", "triangle"],
-    colors: ["#EE3243", "#F4A312", "#18B990", "#5384DC", "#AA55BB",]
+    colors: ["hsl(171, 100%, 41%)", "hsl(217, 71%, 53%)", "hsl(48, 100%, 67%)", "hsl(348, 100%, 61%)", "hsl(271, 100%, 67%)"],
   });
 }
 
