@@ -92,7 +92,7 @@ body {
 
 #social {
   padding-bottom: 1rem;
-  .ti {
+  .icon {
     font-size: 1.25rem;
   }
   @include mixins.touch {
@@ -120,6 +120,8 @@ section > p,
 
 .button {
   font-weight: 500;
+  padding-top: 0;
+  padding-bottom: 0;
   transition: all 0.2s iv.$easing;
 }
 
@@ -161,14 +163,12 @@ section > p,
 .card {
   --bulma-card-shadow: none; // remove hideous default shadow
   border: 1px solid iv.$grey-darker;
-  .ti {
+  .icon {
     font-size: 1.5rem;
   }
-}
-
-.card .tag {
-  margin-left: 0.25rem;
-  margin-right: 0.25rem;
+  .tag {
+    margin-right: 0.75rem;
+  }
 }
 
 .card-header-icon .icon {
@@ -176,4 +176,8 @@ section > p,
   &:hover {
     color: iv.$white;
   }
+}
+
+.message .icon {
+  font-size: 1.5rem;
 }
