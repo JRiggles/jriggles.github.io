@@ -87,7 +87,9 @@ body {
 #about {
   margin-top: 4rem;
   margin-bottom: 4rem;
-  width: calc(100% - 2rem);
+  padding: 32px;
+  padding-bottom: 0;
+  // width: calc(100% - 2rem);
 }
 
 #social {
@@ -166,9 +168,11 @@ section > p,
   .icon {
     font-size: 1.5rem;
   }
-  .tag {
-    margin-right: 0.75rem;
-  }
+}
+
+.card-header {
+  background-color: iv.$grey-darker;
+  // border-bottom: 1px solid iv.$grey-darker;
 }
 
 .card-header-icon .icon {
