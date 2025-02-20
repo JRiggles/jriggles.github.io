@@ -85,7 +85,11 @@ html(data-theme="dark" lang="en")
         section.section#right-column
             .container.is-fluid#projects
                 .title.is-family-secondary.is-5 Projects
-                p.is-size-6 Almost every project starts as an excuse to learn something new or practice something I've learned. I've written a few extensions for the Aseprite pixel art editor, all of which are available on my itch.io page for free / "pay what you want". If you find them useful, please consider donating to support future development! I also work on hardware projects, including custom mechanical keyboards, guitar effects pedals, and more. I develop apps and CircuitPython libraries to solve specific problems and enhance my workflow.
+                p.is-size-6 Almost every project starts as an excuse to learn something new or practice something I've learned. I develop apps, libraries, and hardware to solve specific problems and enhance my workflow.
+
+                p I've written a few extensions for the Aseprite pixel art editor, all of which are available on my itch.io page for free / "pay what you want"; if you find any of them useful, please consider donating to support future development!
+
+                p My hardware projects include custom mechanical keyboards, guitar effects pedals, and more.
                 br
                 .columns.is-desktop.is-multiline
                     .column
@@ -103,10 +107,11 @@ html(data-theme="dark" lang="en")
                                     p Aseprite Extension Updater is a tool that helps you keep your Aseprite extensions up to date. It checks participating extensions for updates and allows you to download and install them with ease.
                             .card-footer
                                 .card-footer-item.is-justify-content-left
-                                    span.tag Aseprite
-                                    span.tag Lua
-                                    span.tag.is-black WIP
-                                    span.tag.is-warning Prerelease
+                                    .tags
+                                        span.tag Aseprite
+                                        span.tag Lua
+                                        span.tag.is-black WIP
+                                        span.tag.is-warning Prerelease
                     .column
                         .card
                             .card-header
@@ -125,8 +130,9 @@ html(data-theme="dark" lang="en")
                                     p Canvas Templates is an Aseprite extension that provides a set of templates for common canvas sizes and layouts, including sizes for some famous retro game consoles. It's designed to help artists quickly set up their workspace and start creating without worrying about canvas dimensions.
                             .card-footer
                                 .card-footer-item.is-justify-content-left
-                                    span.tag Aseprite
-                                    span.tag Lua
+                                    .tags
+                                        span.tag Aseprite
+                                        span.tag Lua
                 .columns.is-desktop.is-multiline
                     .column
                         .card
@@ -146,8 +152,9 @@ html(data-theme="dark" lang="en")
                                     p This Aseprite extension allows you to copy individual color channels to separate layers. It's useful for advanced image editing and manipulation.
                             .card-footer
                                 .card-footer-item.is-justify-content-left
-                                    span.tag Aseprite
-                                    span.tag Lua
+                                    .tags
+                                        span.tag Aseprite
+                                        span.tag Lua
                     .column
                         .card
                             .card-header
@@ -163,9 +170,10 @@ html(data-theme="dark" lang="en")
                                     p A.K.A. "Dual Ergolinear Low-Profile Human Interface". DELPHI is a minimal split mechanical keyboard designed to combine ergonomics and an ortholinear layout into a small form factor.
                             .card-footer
                                 .card-footer-item.is-justify-content-left
-                                    span.tag CircuitPython
-                                    span.tag Fusion
-                                    span.tag KiCAD
+                                    .tags
+                                        span.tag CircuitPython
+                                        span.tag Fusion
+                                        span.tag KiCAD
                 .columns.is-desktop.is-multiline
                     .column
                         .card
@@ -185,8 +193,9 @@ html(data-theme="dark" lang="en")
                                     p EaseSprite is an Aseprite extension that provides easing functions for smooth animations. It helps you create more natural and visually appealing animations in your sprite work.
                             .card-footer
                                 .card-footer-item.is-justify-content-left
-                                    span.tag Aseprite
-                                    span.tag Lua
+                                    .tags
+                                        span.tag Aseprite
+                                        span.tag Lua
                     .column
                         .card
                             .card-header
@@ -205,8 +214,9 @@ html(data-theme="dark" lang="en")
                                     p This Aseprite extension allows you to flatten all visible layers into a new layer, preserving the original layers. It's useful for non-destructive editing workflows.
                             .card-footer
                                 .card-footer-item.is-justify-content-left
-                                    span.tag Aseprite
-                                    span.tag Lua
+                                    .tags
+                                        span.tag Aseprite
+                                        span.tag Lua
                 .columns.is-desktop.is-multiline
                     .column
                         .card
@@ -223,7 +233,8 @@ html(data-theme="dark" lang="en")
                                     p Git-Real is a CircuitPython project that uses an Adafruit ESP32 Feather and an LED matrix display wing to provide a real-life display of your GitHub commit history. It's a fun way to visualize coding progress and stay motivated!
                             .card-footer
                                 .card-footer-item.is-justify-content-left
-                                    span.tag CircuitPython
+                                    .tags
+                                        span.tag CircuitPython
                     .column
                         .card
                             .card-header
@@ -239,8 +250,9 @@ html(data-theme="dark" lang="en")
                                     p IQS5XX is a CircuitPython library for the TPS43 and TPS65 trackpad modules from Azoteq (the name comes from the family of interface chips used on those modules).
                             .card-footer
                                 .card-footer-item.is-justify-content-left
-                                    span.tag CircuitPython
-                                    //- span.tag.is-black WIP
+                                    .tags
+                                        span.tag CircuitPython
+                                        //- span.tag.is-black WIP
                 .columns.is-desktop.is-multiline
                     .column
                         .card
@@ -260,8 +272,9 @@ html(data-theme="dark" lang="en")
                                     p This Aseprite extension allows you to import and use color palettes from <a href="https://lospec.com" alt="link to Lospec.com">Lospec.com</a>.
                             .card-footer
                                 .card-footer-item.is-justify-content-left
-                                    span.tag Aseprite
-                                    span.tag Lua
+                                    .tags
+                                        span.tag Aseprite
+                                        span.tag Lua
                     .column
                         .card
                             .card-header
@@ -277,9 +290,27 @@ html(data-theme="dark" lang="en")
                                     p LTOTD (Lospec Tag of the Day) is a MacOS menu bar app that displays the current Lospec Tag of the Day. It's written in Python using the rumps library.
                             .card-footer
                                 .card-footer-item.is-justify-content-left
-                                    span.tag Python
-                                    span.tag.is-black WIP
+                                    .tags
+                                        span.tag Python
+                                        span.tag.is-black WIP
                 .columns.is-desktop.is-multiline
+                    .column
+                        .card
+                            .card-header
+                                .card-header-title.is-family-secondary PDBar
+                                a.card-header-icon(href="https://github.com/JRiggles/PDBar" target="_blank" aria-label="GitHub")
+                                    span.icon
+                                        i.ti.ti-brand-github
+                            .card-image
+                                figure.image
+                                    img(src="https://raw.githubusercontent.com/JRiggles/PDBar/main/src/appicon.png" alt="an image of the PDBar app icon")
+                            .card-content
+                                .content
+                                    p PDBar is a MacOS menu bar app that displays the current Pixel Dailies prompt. It's written in Python using the rumps library.
+                            .card-footer
+                                .card-footer-item.is-justify-content-left
+                                    .tags
+                                        span.tag Python
                     .column
                         .card
                             .card-header
@@ -292,7 +323,9 @@ html(data-theme="dark" lang="en")
                                     p Sluggify Lua is a Lua port of <a href="https://github.com/skeddles/sluggify" target="_blank">skeddles/sluggify</a> that converts strings into URL-friendly slugs. I originally wrote it as a part of Lospec Palette Importer, but I thought it might be useful on its own. You can use it to create clean and readable URLs from arbitrary text.
                             .card-footer
                                 .card-footer-item.is-justify-content-left
-                                    span.tag Lua
+                                    .tags
+                                        span.tag Lua
+                .columns.is-desktop.is-multiline
                     .column
                         .card
                             .card-header
@@ -308,10 +341,10 @@ html(data-theme="dark" lang="en")
                                     p Tonegrove is my brand for guitar effects pedals designed and hand-built by me. My first design, an ultra-clean booster/buffer called "Seedling", is available now. If you're interested, please consider supporting my Reverb shop!
                             .card-footer
                                 .card-footer-item.is-justify-content-left
-                                    span.tag Fusion
-                                    span.tag Inkscape
-                                    span.tag KiCAD
-                .columns.is-desktop.is-multiline
+                                    .tags
+                                        span.tag Fusion
+                                        span.tag Inkscape
+                                        span.tag KiCAD
                     .column
                         .card
                             .card-header
@@ -327,9 +360,8 @@ html(data-theme="dark" lang="en")
                                     p tkfeather is a Python package that allows you to use Cole Bemis' <a href="https://feathericons.com/" alt="link to Feather Icons">Feather Icons</a> in Python's built-in GUI framework, tkinter. Run <span class="has-text-primary is-family-monospace has-text-weight-medium">pip install tkfeather</span> to try it out!
                             .card-footer
                                 .card-footer-item.is-justify-content-left
-                                    span.tag Python
-                    //- dummy column for spacing
-                    .column
+                                    .tags
+                                        span.tag Python
                 .columns.is-desktop.is-multiline
                     .column
                         p.content.is-size-7.has-text-grey.has-text-centered#PS If you'd like to know more about how I built this site, you can check out the source code on GitHub
