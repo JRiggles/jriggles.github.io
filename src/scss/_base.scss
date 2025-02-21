@@ -84,6 +84,14 @@ body {
   }
 }
 
+// #heading-tags {
+//   @include mixins.touch {
+//     display: flex;
+//     justify-content: center;
+//     width: calc(66% - 2rem);
+//   }
+// }
+
 #about {
   margin-top: 4rem;
   margin-bottom: 4rem;
@@ -98,9 +106,13 @@ body {
     font-size: 1.25rem;
   }
   @include mixins.touch {
-    margin-top: -2rem;
+    display: flex;
+    justify-content: center;
+    margin-top: -1rem;
     padding-bottom: 2rem;
-    width: 33%;
+    .button {
+      width: calc(100% - 2rem);
+    }
   }
 }
 
