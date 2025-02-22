@@ -93,7 +93,7 @@ body {
 // }
 
 #about {
-  margin-top: 4rem;
+  margin-top: 2rem;
   margin-bottom: 4rem;
   padding: 32px;
   padding-bottom: 0;
@@ -101,7 +101,8 @@ body {
 }
 
 #social {
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
+  width: calc(66% - 2rem);
   .icon {
     font-size: 1.25rem;
   }
@@ -109,7 +110,6 @@ body {
     display: flex;
     justify-content: center;
     margin-top: -1rem;
-    padding-bottom: 2rem;
     .button {
       width: calc(100% - 2rem);
     }
@@ -137,23 +137,34 @@ section > p,
   padding-top: 0;
   padding-bottom: 0;
   transition: all 0.2s iv.$easing;
+  .icon, .text {
+    transition: color 0.2s iv.$easing;
+  }
+  &:hover {
+    background: iv.$black-ter;
+  }
 }
 
 // show brand colors on hover
 .btn-mastodon:hover {
-  background: #6364f6;
+  color: #6364f6;
 }
 
-.btn-github:hover {
-  background: #1B2028;
-}
+// .btn-github:hover {
+//   background: #1B2028;
+// }
 
 .btn-itch:hover {
-  background: #FA5C5C;
+  color: #FA5C5C;
 }
 
 .btn-stackoverflow:hover {
-  background: #F48024;
+  color: #F48024;
+}
+
+.btn-buymeacoffee:hover {
+  // color:#E9BE4B;
+  color: #f9de4b;
 }
 
 .gravatar {
