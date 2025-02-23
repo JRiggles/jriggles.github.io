@@ -34,7 +34,7 @@ body {
 
   .icon {
     color: iv.$grey;
-    transform: rotate(45deg) translate(1.7rem, -0.9rem);
+    transform: rotate(45deg) translate(1.75rem, -0.9rem);
     &:hover {
       color: iv.$white;
     }
@@ -84,20 +84,15 @@ body {
   }
 }
 
-// #heading-tags {
-//   @include mixins.touch {
-//     display: flex;
-//     justify-content: center;
-//     width: calc(66% - 2rem);
-//   }
-// }
-
 #about {
   margin-top: 2rem;
   margin-bottom: 4rem;
-  padding: 32px;
+  padding: 2rem;
   padding-bottom: 0;
   // width: calc(100% - 2rem);
+  @include mixins.touch {
+    margin-bottom: 3rem;
+  }
 }
 
 #social {
@@ -109,9 +104,8 @@ body {
   @include mixins.touch {
     display: flex;
     justify-content: center;
-    margin-top: -1rem;
     .button {
-      width: calc(100% - 2rem);
+      width: 100%;
     }
   }
 }
