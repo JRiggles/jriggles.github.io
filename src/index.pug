@@ -114,7 +114,6 @@ html(data-theme="dark" lang="en")
                                     .tags
                                         span.tag Aseprite
                                         span.tag Lua
-                                        span.tag.is-black WIP
                                         span.tag.is-warning On hold
                     .column
                         .card
@@ -333,6 +332,20 @@ html(data-theme="dark" lang="en")
                     .column
                         .card
                             .card-header
+                                .card-header-title.is-family-secondary Sluggify Python
+                                a.card-header-icon(href="https://github.com/JRiggles/sluggify-python" target="_blank" aria-label="GitHub")
+                                    span.icon
+                                        i.ti.ti-brand-github
+                            .card-content
+                                .content
+                                    p Sluggify Python is a Python port of <a href="https://github.com/skeddles/sluggify" target="_blank">skeddles/sluggify</a> that converts strings into URL-friendly slugs. It's the same as Sluggify Lua, but in Python!
+                            .card-footer
+                                .card-footer-item.is-justify-content-left
+                                    .tags
+                                        span.tag Python
+                    .column
+                        .card
+                            .card-header
                                 .card-header-title.is-family-secondary Tonegrove
                                 a.card-header-icon(href="https://reverb.com/shop/tonegrove" target="_blank" aria-label="Reverb")
                                     span.icon
@@ -349,6 +362,7 @@ html(data-theme="dark" lang="en")
                                         span.tag Fusion
                                         span.tag Inkscape
                                         span.tag KiCAD
+                .columns.is-desktop.is-multiline
                     .column
                         .card
                             .card-header
@@ -366,6 +380,8 @@ html(data-theme="dark" lang="en")
                                 .card-footer-item.is-justify-content-left
                                     .tags
                                         span.tag Python
+                    .column
+                        //- empty column for spacing
                 .columns.is-desktop.is-multiline
                     .column
                         p.content.is-size-7.has-text-grey.has-text-centered#PS If you'd like to know more about how I built this site, you can check out the source code on GitHub
