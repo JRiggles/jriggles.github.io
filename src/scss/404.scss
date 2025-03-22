@@ -1,0 +1,61 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  // background: #040506;
+  background: black;
+  color: whitesmoke;
+  overflow: hidden;
+  text-align: center;
+}
+
+.txt {
+  animation: fadeIn 5s ease;
+  animation-fill-mode: forwards;
+  left: 50%;
+  position: absolute;
+  text-shadow: 0 1px 5px hsla(0, 0%, 100%, 0.8);
+  transform: translate(-50%, -50%);
+  width: 404px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 {
+  font-family: "Jura", sans-serif;
+  font-size: 7.5rem;
+  font-weight: 400;
+  letter-spacing: 0.3rem;
+  top: 33%;
+  transition: 2s opacity ease;
+}
+
+p {
+  font-family: "Comfortaa", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.15rem;
+  opacity: 0.0;
+  cursor: pointer;
+}
+
+p:first-of-type {
+  top: 50%;
+  animation-delay: 1.5s;
+}
+
+p:last-of-type {
+  top: 53%;
+  animation-delay: 2.5s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0.0; }
+  100% { opacity: 0.9; }
+}
+
+// TODO: reduce total star count and font size on mobile viewports
