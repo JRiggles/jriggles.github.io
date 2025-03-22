@@ -6,8 +6,8 @@
   "scripts": {
     "rebuild-modules": "rm -rf node_modules && npm install",
     "copy static files": "mkdir ./dist/static && cp -R ./src/img/. ./dist/static && cp -R ./src/icons/. ./dist/static",
-    "dev": "npx parcel src/index.pug",
-    "predeploy": "rm -rf .parcel-cache && rm -rf dist && npx parcel build src/index.pug --public-url 'https://jriggles.github.io/' && cp CNAME ./dist",
+    "dev": "npx parcel src/*.pug && cp src/humans.txt ./dist && cp src/robots.txt ./dist",
+    "predeploy": "rm -rf .parcel-cache && rm -rf dist && npx parcel build src/*.pug --public-url 'https://jriggles.github.io/' && cp CNAME ./dist && cp src/humans.txt ./dist && cp src/robots.txt ./dist",
     "deploy": "npx gh-pages -d dist",
     "clean gh-pages cache": "node node_modules/gh-pages/bin/gh-pages-clean"
   },
@@ -22,12 +22,12 @@
   },
   "homepage": "https://github.com/JRiggles/jriggles.github.io#readme",
   "devDependencies": {
-    "@parcel/transformer-pug": "^2.14.0",
-    "@parcel/transformer-sass": "^2.14.0",
+    "@parcel/transformer-pug": "^2.14.1",
+    "@parcel/transformer-sass": "^2.14.1",
     "gh-pages": "^6.2.0"
   },
   "dependencies": {
-    "bulma": "^1.0.0"
+    "bulma": "^1.0.2"
   },
   "targets": {
     "main": false
