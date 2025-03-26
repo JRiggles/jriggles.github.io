@@ -2,8 +2,8 @@ $(document).ready(() => {
   $(".heading, .sub1, .sub2").css({
     opacity: 0.8, // fade in the text
   });
-
-  var starCount = Math.ceil(200 + Math.random() * 200);
+  var minStars = $(window).width() < 768 ? 66 : 200;
+  var starCount = Math.ceil(minStars + Math.random() * minStars);
 
   // get viewport size
   var portHeight = $(window).height();

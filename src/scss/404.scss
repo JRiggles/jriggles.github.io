@@ -1,14 +1,18 @@
+@use "bulma/sass/utilities/mixins";
+
 *, *::before, *::after {
   box-sizing: border-box;
   user-select: none;
 }
 
-body {
+html, body {
   // background: #040506;
   background: black;
   color: whitesmoke;
+  height: 100%;
   overflow: hidden;
   text-align: center;
+  width: 100%;
 }
 
 .txt {
@@ -39,8 +43,13 @@ p {
   font-family: "Comfortaa", sans-serif;
   font-size: 1rem;
   letter-spacing: 0.15rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
   opacity: 0.0;
   cursor: pointer;
+  @include mixins.touch {
+    margin-top: 2rem;
+  }
 }
 
 p:first-of-type {
@@ -52,6 +61,8 @@ p:last-of-type {
   top: 53%;
   animation-delay: 2.5s;
 }
+
+
 
 @keyframes fadeIn {
   0% { opacity: 0.0; }
