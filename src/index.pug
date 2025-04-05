@@ -28,6 +28,7 @@ html(data-theme="dark" lang="en")
         script(src="./js/main.js" type="text/javascript" defer)
         title John Riggles
     body
+        include mixins/project_card.pug
         a(href="https://github.com/JRiggles/jriggles.github.io" target="_blank" alt="link to site source code").repo-link
             span.icon
                 i.ti.ti-brand-github
@@ -109,290 +110,148 @@ html(data-theme="dark" lang="en")
                 p My hardware projects include custom mechanical keyboards, guitar effects pedals, and more.
                 br
                 .columns.is-desktop.is-multiline
-                    .column
-                        .card
-                            .card-header
-                                .card-header-title.is-family-secondary Aseprite Extension Updater
-                                a.card-header-icon(href="https://github.com/JRiggles/aseprite-extension-updater" target="_blank" aria-label="GitHub")
-                                    span.icon
-                                        i.ti.ti-brand-github
-                            .card-image
-                                figure.image
-                                    img(src="https://raw.githubusercontent.com/JRiggles/Aseprite-Extension-Updater/main/screenshots/Extension%20Updater%20Icon.png" alt="a screenshot of my 'Aseprite Extension Updater' project")
-                            .card-content
-                                .content
-                                    p Aseprite Extension Updater is a tool that helps you keep your Aseprite extensions up to date. It checks participating extensions for updates and allows you to download and install them with ease.
-                            .card-footer
-                                .card-footer-item.is-justify-content-left
-                                    .tags
-                                        span.tag Aseprite
-                                        span.tag Lua
-                                        span.tag.is-warning On hold
-                    .column
-                        .card
-                            .card-header
-                                .card-header-title.is-family-secondary Canvas Templates
-                                a.card-header-icon(href="https://github.com/JRiggles/Canvas-Templates" target="_blank" aria-label="GitHub")
-                                    span.icon
-                                        i.ti.ti-brand-github
-                                a.card-header-icon(href="https://sudo-whoami.itch.io/canvas-templates" target="_blank" aria-label="itch.io")
-                                    span.icon
-                                        i.ti.ti-brand-itch
-                            .card-image
-                                figure.image
-                                    img(src="https://raw.githubusercontent.com/JRiggles/Canvas-Templates/main/screenshots/Canvas%20Templates.png" alt="a screenshot of my 'Canvas Templates' project")
-                            .card-content
-                                .content
-                                    p Canvas Templates is an Aseprite extension that provides a set of templates for common canvas sizes and layouts, including sizes for some famous retro game consoles. It's designed to help artists quickly set up their workspace and start creating without worrying about canvas dimensions.
-                            .card-footer
-                                .card-footer-item.is-justify-content-left
-                                    .tags
-                                        span.tag Aseprite
-                                        span.tag Lua
+                    +projectCard(
+                        "Aseprite Extension Updater",
+                        "https://github.com/JRiggles/aseprite-extension-updater",
+                        "",
+                        "https://raw.githubusercontent.com/JRiggles/Aseprite-Extension-Updater/main/screenshots/Extension%20Updater%20Icon.png",
+                        "a screenshot of my 'Aseprite Extension Updater' project",
+                        "Aseprite Extension Updater is a tool that helps you keep your Aseprite extensions up to date. It checks participating extensions for updates and allows you to download and install them with ease.",
+                        ["Aseprite", "Lua", "On hold"]
+                    )
+                    +projectCard(
+                        "Canvas Templates",
+                        "https://github.com/JRiggles/Canvas-Templates",
+                        "https://sudo-whoami.itch.io/canvas-templates",
+                        "https://raw.githubusercontent.com/Jriggles/Canvas-Templates/main/screenshots/Canvas%20Templates.png",
+                        "a screenshot of my 'Canvas Templates' project",
+                        "Canvas Templates is an Aseprite extension that provides a set of templates for common canvas sizes and layouts, including sizes for some famous retro game consoles. It's designed to help artists quickly set up their workspace and start creating without worrying about canvas dimensions.",
+                        ["Aseprite", "Lua"]
+                    )
                 .columns.is-desktop.is-multiline
-                    .column
-                        .card
-                            .card-header
-                                .card-header-title.is-family-secondary Copy Color Channel
-                                a.card-header-icon(href="https://github.com/JRiggles/Copy-Color-Channel" target="_blank" aria-label="GitHub")
-                                    span.icon
-                                        i.ti.ti-brand-github
-                                a.card-header-icon(href="https://sudo-whoami.itch.io/copy-color-channel" target="_blank" aria-label="itch.io")
-                                    span.icon
-                                        i.ti.ti-brand-itch
-                            .card-image
-                                figure.image
-                                    img(src="https://raw.githubusercontent.com/JRiggles/Copy-Color-Channel/main/screenshots/D20%20Multi%20-%20All%20Channels%20-%20Export.png" alt="a screenshot of my 'Copy Color Channel' Aseprite extension")
-                            .card-content
-                                .content
-                                    p This Aseprite extension allows you to copy individual color channels to separate layers. It's useful for advanced image editing and manipulation.
-                            .card-footer
-                                .card-footer-item.is-justify-content-left
-                                    .tags
-                                        span.tag Aseprite
-                                        span.tag Lua
-                    .column
-                        .card
-                            .card-header
-                                .card-header-title.is-family-secondary DELPHI
-                                a.card-header-icon(href="https://github.com/JRiggles/DELPHI-kbd" target="_blank" aria-label="GitHub")
-                                    span.icon
-                                        i.ti.ti-brand-github
-                            .card-image
-                                figure.image
-                                    img(src="https://github.com/JRiggles/DELPHI-kbd/blob/main/images/IMG_3758.jpg?raw=true" alt="a photo of my custom keyboard called DELPHI")
-                            .card-content
-                                .content
-                                    p A.K.A. "Dual Ergolinear Low-Profile Human Interface". DELPHI is a minimal split mechanical keyboard designed to combine ergonomics and an ortholinear layout into a small form factor.
-                            .card-footer
-                                .card-footer-item.is-justify-content-left
-                                    .tags
-                                        span.tag CircuitPython
-                                        span.tag Fusion
-                                        span.tag KiCAD
+                    +projectCard(
+                        "Copy Color Channel",
+                        "https://github.com/JRiggles/Copy-Color-Channel",
+                        "https://sudo-whoami.itch.io/copy-color-channel",
+                        "https://raw.githubusercontent.com/JRiggles/Copy-Color-Channel/main/screenshots/D20%20Multi%20-%20All%20Channels%20-%20Export.png",
+                        "a screenshot of my 'Copy Color Channel' Aseprite extension",
+                        "This Aseprite extension allows you to copy individual color channels to separate layers. It's useful for advanced image editing and manipulation.",
+                        ["Aseprite", "Lua"]
+                    )
+                    +projectCard(
+                        "DELPHI",
+                        "https://github.com/JRiggles/DELPHI-kbd",
+                        "",
+                        "https://github.com/JRiggles/DELPHI-kbd/blob/main/images/IMG_3758.jpg?raw=true",
+                        "a photo of my custom keyboard called DELPHI",
+                        "A.K.A. 'Dual Ergolinear Low-Profile Human Interface'. DELPHI is a minimal split mechanical keyboard designed to combine ergonomics and an ortholinear layout into a small form factor.",
+                        ["CircuitPython", "Fusion", "KiCAD"]
+                    )
                 .columns.is-desktop.is-multiline
-                    .column
-                        .card
-                            .card-header
-                                .card-header-title.is-family-secondary EaseSprite
-                                a.card-header-icon(href="https://github.com/JRiggles/EaseSprite" target="_blank" aria-label="GitHub")
-                                    span.icon
-                                        i.ti.ti-brand-github
-                                a.card-header-icon(href="https://sudo-whoami.itch.io/easesprite" target="_blank" aria-label="itch.io")
-                                    span.icon
-                                        i.ti.ti-brand-itch
-                            .card-image
-                                figure.image
-                                    img(src="https://raw.githubusercontent.com/JRiggles/EaseSprite/main/screenshots/easeInQuad.gif" alt="a demo gif of my 'EaseSprite' Aseprite extension")
-                            .card-content
-                                .content
-                                    p EaseSprite is an Aseprite extension that provides easing functions for smooth animations. It helps you create more natural and visually appealing animations in your sprite work.
-                            .card-footer
-                                .card-footer-item.is-justify-content-left
-                                    .tags
-                                        span.tag Aseprite
-                                        span.tag Lua
-                    .column
-                        .card
-                            .card-header
-                                .card-header-title.is-family-secondary Flatten to New Layer
-                                a.card-header-icon(href="https://github.com/JRiggles/Flatten-to-New-Layer" target="_blank" aria-label="GitHub")
-                                    span.icon
-                                        i.ti.ti-brand-github
-                                a.card-header-icon(href="https://sudo-whoami.itch.io/flatten-to-new-layer" target="_blank" aria-label="itch.io")
-                                    span.icon
-                                        i.ti.ti-brand-itch
-                            .card-image
-                                figure.image
-                                    img(src="https://raw.githubusercontent.com/JRiggles/Flatten-to-New-Layer/main/screenshots/FNL%20Cover%20Image.png" alt="a screenshot of my 'Flatten to New Layer' Aseprite extension")
-                            .card-content
-                                .content
-                                    p This Aseprite extension allows you to flatten all visible layers into a new layer, preserving the original layers. It's useful for non-destructive editing workflows.
-                            .card-footer
-                                .card-footer-item.is-justify-content-left
-                                    .tags
-                                        span.tag Aseprite
-                                        span.tag Lua
+                    +projectCard(
+                        "EaseSprite",
+                        "https://github.com/JRiggles/EaseSprite",
+                        "https://sudo-whoami.itch.io/easesprite",
+                        "https://raw.githubusercontent.com/JRiggles/EaseSprite/main/screenshots/easeInQuad.gif",
+                        "a demo gif of my 'EaseSprite' Aseprite extension",
+                        "EaseSprite is an Aseprite extension that provides easing functions for smooth animations. It helps you create more natural and visually appealing animations in your sprite work.",
+                        ["Aseprite", "Lua"]
+                    )
+                    +projectCard(
+                        "Flatten to New Layer",
+                        "https://github.com/JRiggles/Flatten-to-New-Layer",
+                        "https://sudo-whoami.itch.io/flatten-to-new-layer",
+                        "https://raw.githubusercontent.com/JRiggles/Flatten-to-New-Layer/main/screenshots/FNL%20Cover%20Image.png",
+                        "a screenshot of my 'Flatten to New Layer' Aseprite extension",
+                        "This Aseprite extension allows you to flatten all visible layers into a new layer, preserving the original layers. It's useful for non-destructive editing workflows.",
+                        ["Aseprite", "Lua"]
+                    )
                 .columns.is-desktop.is-multiline
-                    .column
-                        .card
-                            .card-header
-                                .card-header-title.is-family-secondary Git-Real
-                                a.card-header-icon(href="https://github.com/JRiggles/Git-Real" target="_blank" aria-label="GitHub")
-                                    span.icon
-                                        i.ti.ti-brand-github
-                            .card-image
-                                figure.image
-                                    img(src="https://raw.githubusercontent.com/JRiggles/Git-Real/main/images/demo.gif" alt="a demo gif of my 'Git-Real' project")
-                            .card-content
-                                .content
-                                    p Git-Real is a CircuitPython project that uses an Adafruit ESP32 Feather and an LED matrix display wing to provide a real-life display of your GitHub commit history. It's a fun way to visualize coding progress and stay motivated!
-                            .card-footer
-                                .card-footer-item.is-justify-content-left
-                                    .tags
-                                        span.tag CircuitPython
-                    .column
-                        .card
-                            .card-header
-                                .card-header-title.is-family-secondary IQS5XX
-                                a.card-header-icon(href="https://github.com/JRiggles/IQS5XX" target="_blank" aria-label="GitHub")
-                                    span.icon
-                                        i.ti.ti-brand-github
-                            .card-image
-                                figure.image
-                                    img(src="https://www.dropbox.com/scl/fi/7o8k5ed39c2z5sdsdhzkp/IQS5XX.py.png?rlkey=4i1lmhc12iv4y9iqn6o7f2mwx&st=4m2nquol&raw=1" alt="an image of partial source code for my IQS5XX Python library")
-                            .card-content
-                                .content
-                                    p IQS5XX is a CircuitPython library for the TPS43 and TPS65 trackpad modules from Azoteq (the name comes from the family of interface chips used on those modules).
-                            .card-footer
-                                .card-footer-item.is-justify-content-left
-                                    .tags
-                                        span.tag CircuitPython
-                                        //- span.tag.is-black WIP
+                    +projectCard(
+                        "Git-Real",
+                        "https://github.com/JRiggles/Git-Real",
+                        "",
+                        "https://raw.githubusercontent.com/JRiggles/Git-Real/main/images/demo.gif",
+                        "a demo gif of my 'Git-Real' project",
+                        "Git-Real is a CircuitPython project that uses an Adafruit ESP32 Feather and an LED matrix display wing to provide a real-life display of your GitHub commit history. It's a fun way to visualize coding progress and stay motivated!",
+                        ["CircuitPython"]
+                    )
+                    +projectCard(
+                        "IQS5XX",
+                        "https://github.com/JRiggles/IQS5XX",
+                        "",
+                        "https://www.dropbox.com/scl/fi/7o8k5ed39c2z5sdsdhzkp/IQS5XX.py.png?rlkey=4i1lmhc12iv4y9iqn6o7f2mwx&st=4m2nquol&raw=1",
+                        "an image of partial source code for my IQS5XX Python library",
+                        "IQS5XX is a CircuitPython library for the TPS43 and TPS65 trackpad modules from Azoteq (the name comes from the family of interface chips used on those modules).",
+                        ["CircuitPython"]
+                    )
                 .columns.is-desktop.is-multiline
-                    .column
-                        .card
-                            .card-header
-                                .card-header-title.is-family-secondary Lospec Palette Importer
-                                a.card-header-icon(href="https://github.com/JRiggles/Lospec-Palette-Importer" target="_blank" aria-label="GitHub")
-                                    span.icon
-                                        i.ti.ti-brand-github
-                                a.card-header-icon(href="https://sudo-whoami.itch.io/lospec-palette-importer" target="_blank" aria-label="itch.io")
-                                    span.icon
-                                        i.ti.ti-brand-itch
-                            .card-image
-                                figure.image
-                                    img(src="https://raw.githubusercontent.com/JRiggles/Lospec-Palette-Importer/main/screenshots/palette%20preview%20dialog.png" alt="a screenshot of my Aseprite extension 'Lospec Palette Importer'")
-                            .card-content
-                                .content
-                                    p This Aseprite extension allows you to import and use color palettes from <a href="https://lospec.com" alt="link to Lospec.com">Lospec.com</a>.
-                            .card-footer
-                                .card-footer-item.is-justify-content-left
-                                    .tags
-                                        span.tag Aseprite
-                                        span.tag Lua
-                    .column
-                        .card
-                            .card-header
-                                .card-header-title.is-family-secondary LTOTD
-                                a.card-header-icon(href="https://github.com/JRiggles/LTOTD" target="_blank" aria-label="GitHub")
-                                    span.icon
-                                        i.ti.ti-brand-github
-                            .card-image
-                                figure.image
-                                    img(src="https://raw.githubusercontent.com/JRiggles/LTOTD/main/src/appicon.png" alt="an image of the LTOTD app icon")
-                            .card-content
-                                .content
-                                    p LTOTD (Lospec Tag of the Day) is a MacOS menu bar app that displays the current Lospec Tag of the Day. It's written in Python using the rumps library.
-                            .card-footer
-                                .card-footer-item.is-justify-content-left
-                                    .tags
-                                        span.tag Python
-                                        span.tag.is-black WIP
+                    +projectCard(
+                        "Lospec Palette Importer",
+                        "https://github.com/JRiggles/Lospec-Palette-Importer",
+                        "https://sudo-whoami.itch.io/lospec-palette-importer",
+                        "https://raw.githubusercontent.com/JRiggles/Lospec-Palette-Importer/main/screenshots/palette%20preview%20dialog.png",
+                        "a screenshot of my Aseprite extension 'Lospec Palette Importer'",
+                        "This Aseprite extension allows you to import and use color palettes from Lospec.com.",
+                        ["Aseprite", "Lua"]
+                    )
+                    +projectCard(
+                        "LTOTD",
+                        "https://github.com/JRiggles/LTOTD",
+                        "",
+                        "https://raw.githubusercontent.com/JRiggles/LTOTD/main/src/appicon.png",
+                        "an image of the LTOTD app icon",
+                        "LTOTD (Lospec Tag of the Day) is a MacOS menu bar app that displays the current Lospec Tag of the Day. It's written in Python using the rumps library.",
+                        ["Python", "WIP"]
+                    )
                 .columns.is-desktop.is-multiline
-                    .column
-                        .card
-                            .card-header
-                                .card-header-title.is-family-secondary PDBar
-                                a.card-header-icon(href="https://github.com/JRiggles/PDBar" target="_blank" aria-label="GitHub")
-                                    span.icon
-                                        i.ti.ti-brand-github
-                            .card-image
-                                figure.image
-                                    img(src="https://raw.githubusercontent.com/JRiggles/PDBar/main/src/appicon.png" alt="an image of the PDBar app icon")
-                            .card-content
-                                .content
-                                    p PDBar is a MacOS menu bar app that displays the current Pixel Dailies prompt. It's written in Python using the rumps library.
-                            .card-footer
-                                .card-footer-item.is-justify-content-left
-                                    .tags
-                                        span.tag Python
-                    .column
-                        .card
-                            .card-header
-                                .card-header-title.is-family-secondary Sluggify Lua
-                                a.card-header-icon(href="https://github.com/JRiggles/sluggify-lua" target="_blank" aria-label="GitHub")
-                                    span.icon
-                                        i.ti.ti-brand-github
-                            .card-content
-                                .content
-                                    p Sluggify Lua is a Lua port of <a href="https://github.com/skeddles/sluggify" target="_blank">skeddles/sluggify</a> that converts strings into URL-friendly slugs. I originally wrote it as a part of Lospec Palette Importer, but I thought it might be useful on its own. You can use it to create clean and readable URLs from arbitrary text.
-                            .card-footer
-                                .card-footer-item.is-justify-content-left
-                                    .tags
-                                        span.tag Lua
+                    +projectCard(
+                        "PDBar",
+                        "https://github.com/JRiggles/PDBar",
+                        "",
+                        "https://raw.githubusercontent.com/JRiggles/PDBar/main/src/appicon.png",
+                        "an image of the PDBar app icon",
+                        "PDBar is a MacOS menu bar app that displays the current Pixel Dailies prompt. It's written in Python using the rumps library.",
+                        ["Python"]
+                    )
+                    +projectCard(
+                        "Sluggify Lua",
+                        "https://github.com/JRiggles/sluggify-lua",
+                        "",
+                        "",
+                        "",
+                        "Sluggify Lua is a Lua port of skeddles/sluggify that converts strings into URL-friendly slugs. I originally wrote it as a part of Lospec Palette Importer, but I thought it might be useful on its own. You can use it to create clean and readable URLs from arbitrary text.",
+                        ["Lua"]
+                    )
                 .columns.is-desktop.is-multiline
-                    .column
-                        .card
-                            .card-header
-                                .card-header-title.is-family-secondary Sluggify Python
-                                a.card-header-icon(href="https://github.com/JRiggles/sluggify-python" target="_blank" aria-label="GitHub")
-                                    span.icon
-                                        i.ti.ti-brand-github
-                            .card-content
-                                .content
-                                    p Sluggify Python is a Python port of <a href="https://github.com/skeddles/sluggify" target="_blank">skeddles/sluggify</a> that converts strings into URL-friendly slugs. It's the same as Sluggify Lua, but in Python!
-                            .card-footer
-                                .card-footer-item.is-justify-content-left
-                                    .tags
-                                        span.tag Python
-                    .column
-                        .card
-                            .card-header
-                                .card-header-title.is-family-secondary Tonegrove
-                                a.card-header-icon(href="https://reverb.com/shop/tonegrove" target="_blank" aria-label="Reverb")
-                                    span.icon
-                                        i.ti.ti-external-link
-                            .card-image
-                                figure.image
-                                    img(src="https://rvb-img.reverb.com/image/upload/s--sPd9KSfV--/a_0,c_crop,h_0.676,w_1.000,x_0.000,y_0.200/f_auto,t_large/v1700329659/tbioapjgyfmvpq3tr8bp.jpg" alt="a photo of a guitar booster pedal I call 'Seedling'")
-                            .card-content
-                                .content
-                                    p Tonegrove is my brand for guitar effects pedals designed and hand-built by me. My first design, an ultra-clean booster/buffer called "Seedling", is available now. If you're interested, please consider supporting my Reverb shop!
-                            .card-footer
-                                .card-footer-item.is-justify-content-left
-                                    .tags
-                                        span.tag Fusion
-                                        span.tag Inkscape
-                                        span.tag KiCAD
+                    +projectCard(
+                        "Sluggify Python",
+                        "https://github.com/JRiggles/sluggify-python",
+                        "",
+                        "",
+                        "",
+                        "Sluggify Python is a Python port of skeddles/sluggify that converts strings into URL-friendly slugs. It's the same as Sluggify Lua, but in Python!",
+                        ["Python"]
+                    )
+                    +projectCard(
+                        "Tonegrove",
+                        "",
+                        "https://reverb.com/shop/tonegrove",
+                        "https://rvb-img.reverb.com/image/upload/s--sPd9KSfV--/a_0,c_crop,h_0.676,w_1.000,x_0.000,y_0.200/f_auto,t_large/v1700329659/tbioapjgyfmvpq3tr8bp.jpg",
+                        "a photo of a guitar booster pedal I call 'Seedling'",
+                        "Tonegrove is my brand for guitar effects pedals designed and hand-built by me. My first design, an ultra-clean booster/buffer called 'Seedling', is available now. If you're interested, please consider supporting my Reverb shop!",
+                        ["Fusion", "Inkscape", "KiCAD"]
+                    )
                 .columns.is-desktop.is-multiline
-                    .column
-                        .card
-                            .card-header
-                                .card-header-title.is-family-secondary tkfeather
-                                a.card-header-icon(href="https://github.com/JRiggles/tkfeather" target="_blank" aria-label="GitHub")
-                                    span.icon
-                                        i.ti.ti-brand-github
-                            .card-image
-                                figure.image
-                                    img(src="https://www.dropbox.com/scl/fi/n170vuui29uhwb8sijqcw/tkfeather.png?rlkey=oou926fmsltkdh7u8s65jyzff&st=k6x5wbyu&raw=1" alt="an image of partial source code for my 'tkfeather' Python package")
-                            .card-content
-                                .content
-                                    p tkfeather is a Python package that allows you to use Cole Bemis' <a href="https://feathericons.com/" alt="link to Feather Icons">Feather Icons</a> in Python's built-in GUI framework, tkinter. Run <span class="has-text-primary is-family-monospace has-text-weight-medium">pip install tkfeather</span> to try it out!
-                            .card-footer
-                                .card-footer-item.is-justify-content-left
-                                    .tags
-                                        span.tag Python
+                    +projectCard(
+                        "tkfeather",
+                        "https://github.com/JRiggles/tkfeather",
+                        "",
+                        "https://www.dropbox.com/scl/fi/n170vuui29uhwb8sijqcw/tkfeather.png?rlkey=oou926fmsltkdh7u8s65jyzff&st=k6x5wbyu&raw=1",
+                        "an image of partial source code for my 'tkfeather' Python package",
+                        "tkfeather is a Python package that allows you to use Cole Bemis' Feather Icons in Python's built-in GUI framework, tkinter. Run pip install tkfeather to try it out!",
+                        ["Python"]
+                    )
                     .column
                         //- empty column for spacing
                 .columns.is-desktop.is-multiline

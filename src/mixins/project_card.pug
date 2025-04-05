@@ -1,0 +1,26 @@
+mixin projectCard(title, githubLink, itchLink, imageSrc, imageAlt, description, tags)
+    .column
+        .card
+            .card-header
+                .card-header-title.is-family-secondary= title
+
+                a.card-header-icon(href=githubLink, target="_blank" aria-label="GitHub")
+                    span.icon
+                        i.ti.ti-brand-github
+                        if itchLink
+                            a.card-header-icon(href=itchLink, target="_blank", aria-label="itch.io")
+                                span.icon
+                                    i.ti.ti-brand-itch
+            if imageSrc
+                .card-image
+                    figure.image
+                        img(src=imageSrc, alt=imageAlt)
+            .card-content
+                .content
+                    p= description
+            if tags
+                .card-footer
+                    .card-footer-item.is-justify-content-left
+                        .tags
+                            each tag in tags
+                                span.tag= tag
