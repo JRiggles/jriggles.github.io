@@ -187,6 +187,15 @@ html(data-theme="dark" lang="en")
                     )
                 .columns.is-desktop.is-multiline
                     +projectCard(
+                        "JSON2GPL",
+                        "https://github.com/JRiggles/JSON2GPL",
+                        "",
+                        "https://raw.githubusercontent.com/JRiggles/JSON2GPL/main/screenshots/json2gpl-icon.png",
+                        "The icon for my 'JSON2GPL' project, a riff on the Aseprite icon",
+                        "JSON2GPL is a Python script that converts JSON color palette files into GPL (GIMP Palette) format.\n\nThis script was made to work with JSON files exported by the Sip color picker app for Mac OS, but any JSON file describing a color palette can be used as long as it's formatted properly.\n\nI use it in conjunction with a Mac OS Automator folder action to automatically convert JSON color palettes to GPL when they're added to my Aseprite palettes folder, but you can use it however you want.",
+                        ["Python", "Automator"]
+                    )
+                    +projectCard(
                         "Lospec Palette Importer",
                         "https://github.com/JRiggles/Lospec-Palette-Importer",
                         "https://sudo-whoami.itch.io/lospec-palette-importer",
@@ -195,6 +204,7 @@ html(data-theme="dark" lang="en")
                         "This Aseprite extension allows you to import and use color palettes from Lospec.com.",
                         ["Aseprite", "Lua"]
                     )
+                .columns.is-desktop.is-multiline
                     +projectCard(
                         "LTOTD",
                         "https://github.com/JRiggles/LTOTD",
@@ -204,7 +214,6 @@ html(data-theme="dark" lang="en")
                         "LTOTD (Lospec Tag of the Day) is a MacOS menu bar app that displays the current Lospec Tag of the Day. It's written in Python using the rumps library.",
                         ["Python", "WIP"]
                     )
-                .columns.is-desktop.is-multiline
                     +projectCard(
                         "PDBar",
                         "https://github.com/JRiggles/PDBar",
@@ -214,6 +223,7 @@ html(data-theme="dark" lang="en")
                         "PDBar is a MacOS menu bar app that displays the current Pixel Dailies prompt. It's written in Python using the rumps library.",
                         ["Python"]
                     )
+                .columns.is-desktop.is-multiline
                     +projectCard(
                         "Sluggify Lua",
                         "https://github.com/JRiggles/sluggify-lua",
@@ -223,7 +233,6 @@ html(data-theme="dark" lang="en")
                         "Sluggify Lua is a Lua port of skeddles/sluggify that converts strings into URL-friendly slugs. I originally wrote it as a part of Lospec Palette Importer, but I thought it might be useful on its own. You can use it to create clean and readable URLs from arbitrary text.",
                         ["Lua"]
                     )
-                .columns.is-desktop.is-multiline
                     +projectCard(
                         "Sluggify Python",
                         "https://github.com/JRiggles/sluggify-python",
@@ -233,6 +242,7 @@ html(data-theme="dark" lang="en")
                         "Sluggify Python is a Python port of skeddles/sluggify that converts strings into URL-friendly slugs. It's the same as Sluggify Lua, but in Python!",
                         ["Python"]
                     )
+                .columns.is-desktop.is-multiline
                     +projectCard(
                         "Tonegrove",
                         "",
@@ -242,7 +252,6 @@ html(data-theme="dark" lang="en")
                         "Tonegrove is my brand for guitar effects pedals designed and hand-built by me. My first design, an ultra-clean booster/buffer called 'Seedling', is available now. If you're interested, please consider supporting my Reverb shop!",
                         ["Fusion", "Inkscape", "KiCAD"]
                     )
-                .columns.is-desktop.is-multiline
                     +projectCard(
                         "tkfeather",
                         "https://github.com/JRiggles/tkfeather",
@@ -252,7 +261,7 @@ html(data-theme="dark" lang="en")
                         "tkfeather is a Python package that allows you to use Cole Bemis' Feather Icons in Python's built-in GUI framework, tkinter. Run pip install tkfeather to try it out!",
                         ["Python"]
                     )
-                    .column
+                    //- .column
                         //- empty column for spacing
                 .columns.is-desktop.is-multiline
                     .column
