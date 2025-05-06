@@ -1,19 +1,17 @@
-mixin projectCard(title, githubLink, itchLink, imageSrc, imageAlt, description, tags)
+mixin projectCard(title, links, image, description, tags)
     .column
         .card
             .card-header
                 .card-header-title.is-family-secondary= title
-                a.card-header-icon(href=githubLink, target="_blank" aria-label="GitHub")
-                    span.icon
-                        i.ti.ti-brand-github
-                if itchLink
-                    a.card-header-icon(href=itchLink, target="_blank", aria-label="itch.io")
-                        span.icon
-                            i.ti.ti-brand-itch
-            if imageSrc
+                if links
+                    each link in links
+                        a.card-header-icon(href= link.href, target="_blank", aria-label= link.ariaLabel)
+                            span.icon
+                                i(class= link.icon)
+            if image
                 .card-image
                     figure.image
-                        img(src=imageSrc, alt=imageAlt)
+                        img(src= image.src, alt= image.alt)
             .card-content
                 .content
                     p= description
