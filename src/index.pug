@@ -148,6 +148,27 @@ html(data-theme="dark" lang="en")
                     )
                 .columns.is-desktop.is-multiline
                     +projectCard(
+                        "Censor Analyzer for Aseprite",
+                        [
+                            {
+                                href: "https://github.com/JRiggles/censor-analyzer-for-aseprite",
+                                ariaLabel: "GitHub repository for Censor Analyzer for Aseprite",
+                                icon: "ti ti-brand-github"
+                            },
+                            {
+                                href: "https://sudo-whoami.itch.io/censor-analyzer-for-aseprite",
+                                ariaLabel: "Itch.io page for Censor Analyzer for Aseprite",
+                                icon: "ti ti-brand-itch"
+                            },
+                        ],
+                        {
+                            src: "https://raw.githubusercontent.com/JRiggles/Censor-Analyzer-for-Aseprite/main/screenshots/preview%202.png",
+                            alt: "Screenshot of Censor Analyzer for Aseprite"
+                        },
+                        "This Aseprite extension allows you to analyze color palettes using Quickmarble's \"Censor\" palette analysis tool directly in Aseprite. It provides a convenient way to analyze and visualize color palettes without leaving the Aseprite environment.",
+                        ["Aseprite", "Lua", "Initial release"]
+                    )
+                    +projectCard(
                         "Copy Color Channel",
                         [
                             {
@@ -168,6 +189,7 @@ html(data-theme="dark" lang="en")
                         "This Aseprite extension allows you to copy individual color channels to separate layers. It's useful for advanced image editing and manipulation.",
                         ["Aseprite", "Lua"]
                     )
+                .columns.is-desktop.is-multiline
                     +projectCard(
                         "DELPHI",
                         [
@@ -184,7 +206,6 @@ html(data-theme="dark" lang="en")
                         "A.K.A. 'Dual Ergolinear Low-Profile Human Interface'. DELPHI is a minimal split mechanical keyboard designed to combine ergonomics and an ortholinear layout into a small form factor.",
                         ["CircuitPython", "Fusion", "KiCAD"]
                     )
-                .columns.is-desktop.is-multiline
                     +projectCard(
                         "EaseSprite",
                         [
@@ -206,6 +227,7 @@ html(data-theme="dark" lang="en")
                         "EaseSprite is an Aseprite extension that provides easing functions for smooth animations. It helps you create more natural and visually appealing animations in your sprite work.",
                         ["Aseprite", "Lua"]
                     )
+                .columns.is-desktop.is-multiline
                     +projectCard(
                         "Flatten to New Layer",
                         [
@@ -227,7 +249,6 @@ html(data-theme="dark" lang="en")
                         "This Aseprite extension allows you to flatten all visible layers into a new layer, preserving the original layers. It's useful for non-destructive editing workflows.",
                         ["Aseprite", "Lua"]
                     )
-                .columns.is-desktop.is-multiline
                     +projectCard(
                         "Git-Real",
                         [
@@ -244,6 +265,7 @@ html(data-theme="dark" lang="en")
                         "Git-Real is a CircuitPython project that uses an Adafruit ESP32 Feather and an LED matrix display wing to provide a real-life display of your GitHub commit history. It's a fun way to visualize coding progress and stay motivated!",
                         ["CircuitPython"]
                     )
+                .columns.is-desktop.is-multiline
                     +projectCard(
                         "IQS5XX",
                         [
@@ -260,7 +282,6 @@ html(data-theme="dark" lang="en")
                         "IQS5XX is a CircuitPython library for the TPS43 and TPS65 trackpad modules from Azoteq (the name comes from the family of interface chips used on those modules).",
                         ["CircuitPython"]
                     )
-                .columns.is-desktop.is-multiline
                     +projectCard(
                         "JSON2GPL",
                         [
@@ -277,6 +298,7 @@ html(data-theme="dark" lang="en")
                         "JSON2GPL is a Python script that converts JSON color palette files into GPL (GIMP Palette) format.\n\nThis script was made to work with JSON files exported by the Sip color picker app for Mac OS, but any JSON file describing a color palette can be used as long as it's formatted properly.\n\nI use it in conjunction with a Mac OS Automator folder action to automatically convert JSON color palettes to GPL when they're added to my Aseprite palettes folder, but you can use it however you want.",
                         ["Python", "Automator"]
                     )
+                .columns.is-desktop.is-multiline
                     +projectCard(
                         "Lospec Palette Importer",
                         [
@@ -298,7 +320,6 @@ html(data-theme="dark" lang="en")
                         "This Aseprite extension allows you to import and use color palettes from Lospec.com.",
                         ["Aseprite", "Lua"]
                     )
-                .columns.is-desktop.is-multiline
                     +projectCard(
                         "LTOTD",
                         [
@@ -315,6 +336,7 @@ html(data-theme="dark" lang="en")
                         "LTOTD (Lospec Tag of the Day) is a MacOS menu bar app that displays the current Lospec Tag of the Day. It's written in Python using the rumps library.",
                         ["Python", "WIP"]
                     )
+                .columns.is-desktop.is-multiline
                     +projectCard(
                         "PDBar",
                         [
@@ -328,7 +350,6 @@ html(data-theme="dark" lang="en")
                         "PDBar is a MacOS menu bar app that displays the current Pixel Dailies prompt. It's written in Python using the rumps library.",
                         ["Python"]
                     )
-                .columns.is-desktop.is-multiline
                     +projectCard(
                         "Sluggify Lua",
                         [
@@ -342,6 +363,7 @@ html(data-theme="dark" lang="en")
                         "Sluggify Lua is a Lua port of skeddles/sluggify that converts strings into URL-friendly slugs. I originally wrote it as a part of Lospec Palette Importer, but I thought it might be useful on its own. You can use it to create clean and readable URLs from arbitrary text.",
                         ["Lua"]
                     )
+                .columns.is-desktop.is-multiline
                     +projectCard(
                         "Sluggify Python",
                         [
@@ -355,7 +377,6 @@ html(data-theme="dark" lang="en")
                         "Sluggify Python is a Python port of skeddles/sluggify that converts strings into URL-friendly slugs. It's the same as Sluggify Lua, but in Python!",
                         ["Python"]
                     )
-                .columns.is-desktop.is-multiline
                     +projectCard(
                         "Tonegrove",
                         [
@@ -372,6 +393,7 @@ html(data-theme="dark" lang="en")
                         "Tonegrove is my brand for guitar effects pedals designed and hand-built by me. My first design, an ultra-clean booster/buffer called 'Seedling', is available now. If you're interested, please consider supporting my Reverb shop!",
                         ["Fusion", "Inkscape", "KiCAD"]
                     )
+                .columns.is-desktop.is-multiline
                     +projectCard(
                         "tkfeather",
                         [
@@ -388,7 +410,7 @@ html(data-theme="dark" lang="en")
                         "tkfeather is a Python package that allows you to use Cole Bemis' Feather Icons in Python's built-in GUI framework, tkinter. Run pip install tkfeather to try it out!",
                         ["Python"]
                     )
-                    //- .column
+                    .column
                     //- empty column for spacing
                 .columns.is-desktop.is-multiline
                     .column
