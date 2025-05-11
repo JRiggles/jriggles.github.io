@@ -67,7 +67,7 @@ html(data-theme="dark" lang="en")
 
             .container#about
                 .title.is-family-secondary.is-5 About me
-                p I'm a self-taught full-stack developer with a background in audio and electronics engineering. My work focuses on Python development for data acquisition, data visualization, and UI/UX design.
+                p I'm a self-taught full-stack developer with a background in audio and electronics engineering. My work focuses on Python development for instrumentation, data acquisition, data visualization, and UI/UX design.
                 br
                 p Outside of work, I enjoy playing guitar, repairing and creating, and working on hardware and software projects. Most of my projects are open-source, and you can learn more about them here.
                 br
@@ -104,10 +104,10 @@ html(data-theme="dark" lang="en")
                 p
                     | I've developed a few extensions for&nbsp;
                     a(href="https://www.aseprite.org" target="_blank") Aseprite
-                    | , all of which are available on my itch.io page for free or "pay what you want"; if you find any of them useful, please consider donating to support future development!
+                    | , all of which are available on my itch.io page for free (or you can "name your own price") ; if you find any of them useful, please consider donating to support future development!
                     | I've also designed and built a few hardware projects, including custom mechanical keyboards, guitar effects pedals, and more.
                 br
-                //- mixin projectCard(title, links, image, description, tags)
+                //- mixin projectCard(title, links[{href, ariaLabel, icon}], image{src, alt}, description, tags[str, ...])
                 .columns.is-desktop.is-multiline
                     +projectCard(
                         "Aseprite Extension Updater",
@@ -346,10 +346,30 @@ html(data-theme="dark" lang="en")
                                 icon: "ti ti-brand-github"
                             },
                         ],
-                        { src: "https://raw.githubusercontent.com/JRiggles/PDBar/main/src/appicon.png", alt: "an image of the PDBar app icon" },
+                        {
+                            src: "https://raw.githubusercontent.com/JRiggles/PDBar/main/src/appicon.png",
+                            alt: "an image of the PDBar app icon"
+                        },
                         "PDBar is a MacOS menu bar app that displays the current Pixel Dailies prompt. It's written in Python using the rumps library.",
                         ["Python"]
                     )
+                    +projectCard(
+                        "Pixel Playing Cards",
+                        [
+                            {
+                                href: "https://sudo-whoami.itch.io/pixel-playing-cards",
+                                ariaLabel: "Itch.io page for Pixel Playing Cards",
+                                icon: "ti ti-brand-itch"
+                            },
+                        ],
+                        {
+                            src: "https://img.itch.zone/aW1hZ2UvMzI2NjQ0NC8xOTQ5OTYyOS5naWY=/original/Yiy%2FoM.gif",
+                            alt: "a gif showing off my 'Pixel Playing Cards' project"
+                        },
+                        "Pixel Playing Cards is a downloadable asset pack containing 52 playing cards and 4 unique card backs with a pixel art aesthetic. You can download them for free or \"name your own price\" on Itch.io.",
+                        ["Aseprite", "Game asset"]
+                    )
+                .columns.is-desktop.is-multiline
                     +projectCard(
                         "Sluggify Lua",
                         [
@@ -363,7 +383,6 @@ html(data-theme="dark" lang="en")
                         "Sluggify Lua is a Lua port of skeddles/sluggify that converts strings into URL-friendly slugs. I originally wrote it as a part of Lospec Palette Importer, but I thought it might be useful on its own. You can use it to create clean and readable URLs from arbitrary text.",
                         ["Lua"]
                     )
-                .columns.is-desktop.is-multiline
                     +projectCard(
                         "Sluggify Python",
                         [
@@ -377,6 +396,7 @@ html(data-theme="dark" lang="en")
                         "Sluggify Python is a Python port of skeddles/sluggify that converts strings into URL-friendly slugs. It's the same as Sluggify Lua, but in Python!",
                         ["Python"]
                     )
+                .columns.is-desktop.is-multiline
                     +projectCard(
                         "Tonegrove",
                         [
@@ -393,7 +413,6 @@ html(data-theme="dark" lang="en")
                         "Tonegrove is my brand for guitar effects pedals designed and hand-built by me. My first design, an ultra-clean booster/buffer called 'Seedling', is available now. If you're interested, please consider supporting my Reverb shop!",
                         ["Fusion", "Inkscape", "KiCAD"]
                     )
-                .columns.is-desktop.is-multiline
                     +projectCard(
                         "tkfeather",
                         [
@@ -410,7 +429,7 @@ html(data-theme="dark" lang="en")
                         "tkfeather is a Python package that allows you to use Cole Bemis' Feather Icons in Python's built-in GUI framework, tkinter. Run pip install tkfeather to try it out!",
                         ["Python"]
                     )
-                    .column
+                    //- .column
                     //- empty column for spacing
                 .columns.is-desktop.is-multiline
                     .column
