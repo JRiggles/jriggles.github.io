@@ -104,7 +104,7 @@ html(data-theme="dark" lang="en")
                 p
                     | I've developed a few extensions for&nbsp;
                     a(href="https://www.aseprite.org" target="_blank") Aseprite
-                    | , all of which are available on my itch.io page for free (or you can "name your own price") ; if you find any of them useful, please consider donating to support future development!
+                    | , all of which are available on my itch.io page for free (or you can "name your own price"); if you find any of them useful, please consider donating to support future development!
                     | I've also designed and built a few hardware projects, including custom mechanical keyboards, guitar effects pedals, and more.
                 br
                 //- mixin projectCard(title, links[{href, ariaLabel, icon}], image{src, alt}, description, tags[str, ...])
@@ -166,7 +166,7 @@ html(data-theme="dark" lang="en")
                             alt: "Screenshot of Censor Analyzer for Aseprite"
                         },
                         "This Aseprite extension allows you to analyze color palettes using Quickmarble's \"Censor\" palette analysis tool directly in Aseprite. It provides a convenient way to analyze and visualize color palettes without leaving the Aseprite environment.",
-                        ["Aseprite", "Lua", "Initial release"]
+                        ["Aseprite", "Lua", "Prerelease"]
                     )
                     +projectCard(
                         "Copy Color Channel",
@@ -367,7 +367,7 @@ html(data-theme="dark" lang="en")
                             alt: "a gif showing off my 'Pixel Playing Cards' project"
                         },
                         "Pixel Playing Cards is a downloadable asset pack containing 52 playing cards and 4 unique card backs with a pixel art aesthetic. You can download them for free or \"name your own price\" on Itch.io.",
-                        ["Aseprite", "Game asset"]
+                        ["Aseprite"]
                     )
                 .columns.is-desktop.is-multiline
                     +projectCard(
@@ -429,7 +429,24 @@ html(data-theme="dark" lang="en")
                         "tkfeather is a Python package that allows you to use Cole Bemis' Feather Icons in Python's built-in GUI framework, tkinter. Run pip install tkfeather to try it out!",
                         ["Python"]
                     )
-                    //- .column
+                .columns.is-desktop.is-multiline
+                    +projectCard(
+                        "Sudo's 16x16 Fantasy Item Asset Pack",
+                        [
+                            {
+                                href: "https://sudo-whoami.itch.io/sudos-16x16-fantasy-item-asset-pack",
+                                ariaLabel: "Itch.io page for Sudo's 16x16 Fantasy Item Asset Pack",
+                                icon: "ti ti-brand-itch"
+                            }
+                        ],
+                        {
+                            src: "https://img.itch.zone/aW1nLzIxMzAwOTM4LnBuZw==/347x500/dfrIuI.png",
+                            alt: "A pixel art graphic featuring the title 'Sudo's 16x16 Fantasy Item Asset Pack.' The design includes various fantasy-themed items like weapons, potions, and tools, arranged around the text on a dark background."
+                        },
+                        "This is my first fully-fledged asset pack, featuring a total of two-hundred 16x16 pixel art fantasy / adventure-style items. It includes a variety of items like weapons, potions, and tools, all designed in a consistent style. You can download it for $4 USD on Itch.io. Your support helps me continue creating and sharing more projects in the future!",
+                        ["Aseprite"]
+                    )
+                    .column
                     //- empty column for spacing
                 .columns.is-desktop.is-multiline
                     .column
