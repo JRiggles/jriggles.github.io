@@ -22,8 +22,8 @@
   },
   "homepage": "https://github.com/JRiggles/jriggles.github.io#readme",
   "devDependencies": {
-    "@parcel/transformer-pug": "^2.14.4",
-    "@parcel/transformer-sass": "^2.14.4",
+    "@parcel/transformer-pug": "^2.15.2",
+    "@parcel/transformer-sass": "^2.15.2",
     "gh-pages": "^6.3.0"
   },
   "dependencies": {
