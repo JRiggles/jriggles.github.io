@@ -371,6 +371,27 @@ html(data-theme="dark" lang="en")
                     )
                 .columns.is-desktop.is-multiline
                     +projectCard(
+                        "Rampart",
+                        [
+                            {
+                                href: "https://github.com/JRiggles/Rampart",
+                                ariaLabel: "GitHub repository for Rampart",
+                                icon: "ti ti-brand-github"
+                            },
+                            {
+                                href: "https://sudo-whoami.itch.io/rampart",
+                                ariaLabel: "Itch.io page for Rampart",
+                                icon: "ti ti-brand-itch"
+                            },
+                        ],
+                        {
+                            src: "https://raw.githubusercontent.com/JRiggles/Rampart/main/screenshots/advanced.png",
+                            alt: "a screenshot of my 'Rampart' Aseprite extension"
+                        },
+                        "Rampart is an Aseprite extension that helps you build color palettes quickly and easily by generating a gradual ramp between two colors of your chosing.",
+                        ["Aseprite", "Lua"]
+                    )
+                    +projectCard(
                         "Sluggify Lua",
                         [
                             {
@@ -383,6 +404,7 @@ html(data-theme="dark" lang="en")
                         "Sluggify Lua is a Lua port of skeddles/sluggify that converts strings into URL-friendly slugs. I originally wrote it as a part of Lospec Palette Importer, but I thought it might be useful on its own. You can use it to create clean and readable URLs from arbitrary text.",
                         ["Lua"]
                     )
+                .columns.is-desktop.is-multiline
                     +projectCard(
                         "Sluggify Python",
                         [
@@ -396,7 +418,6 @@ html(data-theme="dark" lang="en")
                         "Sluggify Python is a Python port of skeddles/sluggify that converts strings into URL-friendly slugs. It's the same as Sluggify Lua, but in Python!",
                         ["Python"]
                     )
-                .columns.is-desktop.is-multiline
                     +projectCard(
                         "Tonegrove",
                         [
@@ -413,6 +434,7 @@ html(data-theme="dark" lang="en")
                         "Tonegrove is my brand for guitar effects pedals designed and hand-built by me. My first design, an ultra-clean booster/buffer called 'Seedling', is available now. If you're interested, please consider supporting my Reverb shop!",
                         ["Fusion", "Inkscape", "KiCAD"]
                     )
+                .columns.is-desktop.is-multiline
                     +projectCard(
                         "tkfeather",
                         [
@@ -429,7 +451,6 @@ html(data-theme="dark" lang="en")
                         "tkfeather is a Python package that allows you to use Cole Bemis' Feather Icons in Python's built-in GUI framework, tkinter. Run pip install tkfeather to try it out!",
                         ["Python"]
                     )
-                .columns.is-desktop.is-multiline
                     +projectCard(
                         "Sudo's 16x16 Fantasy Item Asset Pack",
                         [
@@ -446,7 +467,7 @@ html(data-theme="dark" lang="en")
                         "This is my first fully-fledged asset pack, featuring a total of two-hundred 16x16 pixel art fantasy / adventure-style items. It includes a variety of items like weapons, potions, and tools, all designed in a consistent style. You can name your own price for this asset pack on Itch.io. If you end up using it, please consider donating - your support helps me continue creating and sharing more projects in the future!",
                         ["Aseprite"]
                     )
-                    .column
+                    //- .column
                     //- empty column for spacing
                 .columns.is-desktop.is-multiline
                     .column
