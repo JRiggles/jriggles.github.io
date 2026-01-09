@@ -106,6 +106,7 @@ html(data-theme="dark" lang="en")
                     a(href="https://www.aseprite.org" target="_blank") Aseprite
                     | , all of which are available on my itch.io page for free (or you can "name your own price"); if you find any of them useful, please consider donating to support future development!
                     | I've also designed and built a few hardware projects, including custom mechanical keyboards, guitar effects pedals, and more.
+                    | Some of my smaller projects aren't listed here, but you can find out more on my GitHub and itch.io pages!
                 br
                 //- mixin projectCard(title, links[{href, ariaLabel, icon}], image{src, alt}, description, tags[str, ...])
                 .columns.is-desktop.is-multiline
@@ -166,7 +167,7 @@ html(data-theme="dark" lang="en")
                             alt: "Screenshot of Censor Analyzer for Aseprite"
                         },
                         "This Aseprite extension allows you to analyze color palettes using Quickmarble's \"Censor\" palette analysis tool directly in Aseprite. It provides a convenient way to analyze and visualize color palettes without leaving the Aseprite environment.",
-                        ["Aseprite", "Lua", "Prerelease"]
+                        ["Aseprite", "Lua"]
                     )
                     +projectCard(
                         "Copy Color Channel",
@@ -229,6 +230,22 @@ html(data-theme="dark" lang="en")
                     )
                 .columns.is-desktop.is-multiline
                     +projectCard(
+                        "Everlight",
+                        [
+                            {
+                                href: "https://github.com/JRiggles/Everlight",
+                                ariaLabel: "GitHub repository for Everlight",
+                                icon: "ti ti-brand-github"
+                            },
+                        ],
+                        {
+                            src: "https://raw.githubusercontent.com/JRiggles/Everlight/main/static/appicon.png",
+                            alt: "a image of the Everlight application icon"
+                        },
+                        "Everlight is a MacOS app I wrote for my DM so they could control the Hue lights at my home gaming table to make our D&D games more immersive.",
+                        ["Python"]
+                    )
+                    +projectCard(
                         "Flatten to New Layer",
                         [
                             {
@@ -249,6 +266,7 @@ html(data-theme="dark" lang="en")
                         "This Aseprite extension allows you to flatten all visible layers into a new layer, preserving the original layers. It's useful for non-destructive editing workflows.",
                         ["Aseprite", "Lua"]
                     )
+                .columns.is-desktop.is-multiline
                     +projectCard(
                         "Git-Real",
                         [
@@ -265,7 +283,6 @@ html(data-theme="dark" lang="en")
                         "Git-Real is a CircuitPython project that uses an Adafruit ESP32 Feather and an LED matrix display wing to provide a real-life display of your GitHub commit history. It's a fun way to visualize coding progress and stay motivated!",
                         ["CircuitPython"]
                     )
-                .columns.is-desktop.is-multiline
                     +projectCard(
                         "IQS5XX",
                         [
@@ -282,6 +299,7 @@ html(data-theme="dark" lang="en")
                         "IQS5XX is a CircuitPython library for the TPS43 and TPS65 trackpad modules from Azoteq (the name comes from the family of interface chips used on those modules).",
                         ["CircuitPython"]
                     )
+                .columns.is-desktop.is-multiline
                     +projectCard(
                         "JSON2GPL",
                         [
@@ -295,10 +313,9 @@ html(data-theme="dark" lang="en")
                             src: "https://raw.githubusercontent.com/JRiggles/JSON2GPL/main/screenshots/json2gpl-icon.png",
                             alt: "The icon for my 'JSON2GPL' project, a riff on the Aseprite icon"
                         },
-                        "JSON2GPL is a Python script that converts JSON color palette files into GPL (GIMP Palette) format.\n\nThis script was made to work with JSON files exported by the Sip color picker app for Mac OS, but any JSON file describing a color palette can be used as long as it's formatted properly.\n\nI use it in conjunction with a Mac OS Automator folder action to automatically convert JSON color palettes to GPL when they're added to my Aseprite palettes folder, but you can use it however you want.",
+                        "JSON2GPL is a Python script that converts JSON color palette files into GPL (GIMP Palette) format.\n\nThis script was made to work with JSON files exported by the Sip color picker app for MacOS, but any JSON file describing a color palette can be used as long as it's formatted properly.\n\nI use it in conjunction with a MacOS Automator folder action to automatically convert JSON color palettes to GPL when they're added to my Aseprite palettes folder, but you can use it however you want.",
                         ["Python", "Automator"]
                     )
-                .columns.is-desktop.is-multiline
                     +projectCard(
                         "Lospec Palette Importer",
                         [
@@ -317,9 +334,10 @@ html(data-theme="dark" lang="en")
                             src: "https://raw.githubusercontent.com/JRiggles/Lospec-Palette-Importer/main/screenshots/palette%20preview%20dialog.png",
                             alt: "a screenshot of my Aseprite extension 'Lospec Palette Importer'"
                         },
-                        "This Aseprite extension allows you to import and use color palettes from Lospec.com.",
+                        "This Aseprite extension allows you to import and use color palettes from Lospec.com. It's my most popular Aseprite extension by far, so why not check it out?",
                         ["Aseprite", "Lua"]
                     )
+                .columns.is-desktop.is-multiline
                     +projectCard(
                         "LTOTD",
                         [
@@ -334,9 +352,8 @@ html(data-theme="dark" lang="en")
                             alt: "an image of the LTOTD app icon"
                         },
                         "LTOTD (Lospec Tag of the Day) is a MacOS menu bar app that displays the current Lospec Tag of the Day. It's written in Python using the rumps library.",
-                        ["Python", "WIP"]
+                        ["Python"]
                     )
-                .columns.is-desktop.is-multiline
                     +projectCard(
                         "PDBar",
                         [
@@ -353,6 +370,7 @@ html(data-theme="dark" lang="en")
                         "PDBar is a MacOS menu bar app that displays the current Pixel Dailies prompt. It's written in Python using the rumps library.",
                         ["Python"]
                     )
+                .columns.is-desktop.is-multiline
                     +projectCard(
                         "Pixel Playing Cards",
                         [
@@ -369,7 +387,6 @@ html(data-theme="dark" lang="en")
                         "Pixel Playing Cards is a downloadable asset pack containing 52 playing cards and 4 unique card backs with a pixel art aesthetic. You can download them for free or \"name your own price\" on Itch.io.",
                         ["Aseprite"]
                     )
-                .columns.is-desktop.is-multiline
                     +projectCard(
                         "Rampart",
                         [
@@ -391,6 +408,7 @@ html(data-theme="dark" lang="en")
                         "Rampart is an Aseprite extension that helps you build color palettes quickly and easily by generating a gradual ramp between two colors of your chosing.",
                         ["Aseprite", "Lua"]
                     )
+                .columns.is-desktop.is-multiline
                     +projectCard(
                         "Sluggify Lua",
                         [
@@ -404,7 +422,6 @@ html(data-theme="dark" lang="en")
                         "Sluggify Lua is a Lua port of skeddles/sluggify that converts strings into URL-friendly slugs. I originally wrote it as a part of Lospec Palette Importer, but I thought it might be useful on its own. You can use it to create clean and readable URLs from arbitrary text.",
                         ["Lua"]
                     )
-                .columns.is-desktop.is-multiline
                     +projectCard(
                         "Sluggify Python",
                         [
@@ -418,6 +435,7 @@ html(data-theme="dark" lang="en")
                         "Sluggify Python is a Python port of skeddles/sluggify that converts strings into URL-friendly slugs. It's the same as Sluggify Lua, but in Python!",
                         ["Python"]
                     )
+                .columns.is-desktop.is-multiline
                     +projectCard(
                         "Sudo's 16x16 Fantasy Item Asset Pack",
                         [
@@ -434,7 +452,6 @@ html(data-theme="dark" lang="en")
                         "This is my first fully-fledged asset pack, featuring a total of two-hundred 16x16 pixel art fantasy / adventure-style items. It includes a variety of items like weapons, potions, and tools, all designed in a consistent style. You can name your own price for this asset pack on Itch.io. If you end up using it, please consider donating - your support helps me continue creating and sharing more projects in the future!",
                         ["Aseprite"]
                     )
-                .columns.is-desktop.is-multiline
                     +projectCard(
                         "tkfeather",
                         [
@@ -445,12 +462,13 @@ html(data-theme="dark" lang="en")
                             },
                         ],
                         {
-                            src: "https://www.dropbox.com/scl/fi/n170vuui29uhwb8sijqcw/tkfeather.png?rlkey=oou926fmsltkdh7u8s65jyzff&st=k6x5wbyu&raw=1",
+                            src: "https://raw.githubusercontent.com/JRiggles/tkfeather/main/screenshots/showcase.png",
                             alt: "a image of partial source code for my 'tkfeather' Python package"
                         },
                         "tkfeather is a Python package that allows you to use Cole Bemis' Feather Icons in Python's built-in GUI framework, tkinter. Run pip install tkfeather to try it out!",
                         ["Python"]
                     )
+                .columns.is-desktop.is-multiline
                     +projectCard(
                         "Tonegrove",
                         [
@@ -467,7 +485,7 @@ html(data-theme="dark" lang="en")
                         "Tonegrove is my brand for guitar effects pedals designed and hand-built by me. My first design, an ultra-clean booster/buffer called 'Seedling', is available now. If you're interested, please consider supporting my Reverb shop!",
                         ["Fusion", "Inkscape", "KiCAD"]
                     )
-                    //- .column
+                    .column
                     //- empty column for spacing
                 .columns.is-desktop.is-multiline
                     .column
