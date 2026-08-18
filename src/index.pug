@@ -60,10 +60,10 @@ html(data-theme="dark" lang="en")
                                     span.tag PN
                                     span.tag.is-link He/Him
                             //- a(href="https://stackoverflow.com/users/8512262/jriggles" target="_blank")
-                            .control
-                                .tags.has-addons
-                                    span.tag SO
-                                    span.tag.is-black#reputationTag
+                            //- .control
+                            //-     .tags.has-addons
+                            //-         span.tag SO
+                            //-         span.tag.is-black#reputationTag
 
             .container#about
                 .title.is-family-secondary.is-5 About me
@@ -355,6 +355,23 @@ html(data-theme="dark" lang="en")
                         ["Python"]
                     )
                     +projectCard(
+                        "MAQI",
+                        [
+                            {
+                                href: "https://github.com/JRiggles/MAQI",
+                                ariaLabel: "GitHub repository for MAQI",
+                                icon: "ti ti-brand-github"
+                            },
+                        ],
+                        {
+                            src: "https://raw.githubusercontent.com/JRiggles/MAQI/da625cffffa4dc90865535f7f2e44e406bfa71e0/assets/appicon%20Exports/appicon-iOS-Dark-1024x1024%401x.png",
+                            alt: "an image of the MAQI app icon"
+                        },
+                        "MAQI (Menubar Air Quality Index) is a MacOS menu bar app that displays the current air quality index for your ZIP code. It's written in Python using the rumps library. Data is sourced from the EPA's AirNow API.",
+                        ["Python"]
+                    )
+                .columns.is-desktop.is-multiline
+                    +projectCard(
                         "PDBar",
                         [
                             {
@@ -370,7 +387,6 @@ html(data-theme="dark" lang="en")
                         "PDBar is a MacOS menu bar app that displays the current Pixel Dailies prompt. It's written in Python using the rumps library.",
                         ["Python"]
                     )
-                .columns.is-desktop.is-multiline
                     +projectCard(
                         "Pixel Playing Cards",
                         [
@@ -386,6 +402,23 @@ html(data-theme="dark" lang="en")
                         },
                         "Pixel Playing Cards is a downloadable asset pack containing 52 playing cards and 4 unique card backs with a pixel art aesthetic. You can download them for free or \"name your own price\" on Itch.io.",
                         ["Aseprite"]
+                    )
+                .columns.is-desktop.is-multiline
+                    +projectCard(
+                        "racejames.com",
+                        [
+                            {
+                                href: "https://racejames.com",
+                                ariaLabel: "Link to racejames.com",
+                                icon: "ti ti-external-link"
+                            },
+                        ],
+                        {
+                            src: "./img/racejamesdotcom.png",
+                            alt: "a screenshot of the racejames.com website"
+                        },
+                        "racejames.com is a website I built for local musician and talented friend, Race James. It features a custom design, responsive layout, and integration with Google Calendar for event listings. The site is built with HTML, CSS, and JavaScript/TypeScritp, and is hosted on Vercel. Check it out and support Race James' music!",
+                        ["HTML", "CSS", "JavaScript", "TypeScript", "Vercel"]
                     )
                     +projectCard(
                         "Rampart",
@@ -453,6 +486,20 @@ html(data-theme="dark" lang="en")
                         ["Aseprite"]
                     )
                     +projectCard(
+                        "simple-color-palette-py",
+                        [
+                            {
+                                href: "https://github.com/JRiggles/simple-color-palette-py",
+                                ariaLabel: "GitHub repository for simple-color-palette-py",
+                                icon: "ti ti-brand-github"
+                            },
+                        ],
+                        "",
+                        "A Python package for the Simple Color Palette format, a minimal JSON-based format for storing color palettes in a lightweight, portable way.",
+                        ["Python"]
+                    )
+                .columns.is-desktop.is-multiline
+                    +projectCard(
                         "tkfeather",
                         [
                             {
@@ -468,7 +515,6 @@ html(data-theme="dark" lang="en")
                         "tkfeather is a Python package that allows you to use Cole Bemis' Feather Icons in Python's built-in GUI framework, tkinter. Run pip install tkfeather to try it out!",
                         ["Python"]
                     )
-                .columns.is-desktop.is-multiline
                     +projectCard(
                         "Tonegrove",
                         [
@@ -485,7 +531,7 @@ html(data-theme="dark" lang="en")
                         "Tonegrove is my brand for guitar effects pedals designed and hand-built by me. My first design, an ultra-clean booster/buffer called 'Seedling', is available now. If you're interested, please consider supporting my Reverb shop!",
                         ["Fusion", "Inkscape", "KiCAD"]
                     )
-                    .column
+                    //- .column
                     //- empty column for spacing
                 .columns.is-desktop.is-multiline
                     .column
@@ -495,7 +541,7 @@ html(data-theme="dark" lang="en")
                         article.message.is-small.is-primary
                             .message-body
                                 p
-                                | &copy;2022-25&nbsp;
+                                | &copy;2022-26&nbsp;
                                 strong John Riggles
                                 span.icon.is-pulled-right
                                     i.ti.ti-info-circle
